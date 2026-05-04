@@ -117,10 +117,10 @@ function initGallery() {
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       filterBtns.forEach(b => {
-        b.classList.remove('bg-blue-600', 'text-white');
+        b.classList.remove('bg-accent', 'text-white');
         b.classList.add('bg-white', 'text-gray-700');
       });
-      btn.classList.add('bg-blue-600', 'text-white');
+      btn.classList.add('bg-accent', 'text-white');
       btn.classList.remove('bg-white', 'text-gray-700');
 
       const cat = btn.dataset.filter;
@@ -195,28 +195,28 @@ function initContactForm() {
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
-    const fields = ['nama', 'email', 'telepon', 'subjek', 'pesan'];
+    const fields = ['nama', 'telepon', 'keperluan', 'pesan'];
     let valid = true;
 
     fields.forEach(id => {
       const input = document.getElementById(id);
       const err = document.getElementById(id + '-error');
-      if (!input.value.trim()) {
+      if (input && !input.value.trim()) {
         valid = false;
-        input.classList.add('border-red-500');
+        input.classList.add('border-accent');
         if (err) err.classList.remove('hidden');
-      } else {
-        input.classList.remove('border-red-500');
+      } else if (input) {
+        input.classList.remove('border-accent');
         if (err) err.classList.add('hidden');
       }
     });
 
-    // Email format
+    // Email format (Optional)
     const email = document.getElementById('email');
     const emailErr = document.getElementById('email-error');
-    if (email.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+    if (email && email.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
       valid = false;
-      email.classList.add('border-red-500');
+      email.classList.add('border-accent');
       if (emailErr) { emailErr.textContent = 'Format email tidak valid'; emailErr.classList.remove('hidden'); }
     }
 
@@ -231,9 +231,9 @@ function initContactForm() {
   });
 
   // Clear error on input
-  form.querySelectorAll('input, textarea').forEach(el => {
+  form.querySelectorAll('input, textarea, select').forEach(el => {
     el.addEventListener('input', () => {
-      el.classList.remove('border-red-500');
+      el.classList.remove('border-accent');
       const err = document.getElementById(el.id + '-error');
       if (err) err.classList.add('hidden');
     });

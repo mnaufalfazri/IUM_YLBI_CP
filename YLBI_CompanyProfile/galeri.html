@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galeri — Yayasan Lindungi Anak Bangsa</title>
-  <meta name="description" content="Dokumentasi kegiatan Yayasan Lindungi Anak Bangsa: pendampingan hukum, konseling, pelatihan, dan acara resmi.">
+  <title>Galeri Kegiatan — Yayasan Lindungi Anak Bangsa</title>
+  <meta name="description" content="Dokumentasi kegiatan Yayasan Lindungi Anak Bangsa: pendampingan hukum, konseling, pelatihan, dan kegiatan ABH.">
   <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,7 +16,7 @@
         extend: {
           colors: {
             primary: { DEFAULT:'#1A3A5C', light:'#2563EB', dark:'#0f2a47' },
-            accent: '#F59E0B',
+            accent: { DEFAULT:'#C0392B', hover:'#A93226' },
             light: '#F5F7FA',
           },
           fontFamily: {
@@ -41,24 +41,30 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
         <a href="index.html" class="flex items-center gap-3">
-          <img src="assets/images/logo.png" alt="Logo Yayasan" class="h-10 w-10 object-contain">
+          <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center shrink-0">
+            <i class="fa-solid fa-shield-halved text-primary text-xl"></i>
+          </div>
           <span class="text-white font-display font-bold text-lg leading-tight hidden sm:block">Lindungi Anak<br>Bangsa</span>
         </a>
         <div class="hidden md:flex items-center gap-8">
-          <a href="index.html" class="text-white/80 hover:text-accent transition font-medium">Beranda</a>
+          <a href="index.html" class="text-white/90 hover:text-accent transition font-medium">Beranda</a>
+          <a href="index.html#tentang" class="text-white/90 hover:text-accent transition font-medium">Tentang</a>
+          <a href="index.html#program" class="text-white/90 hover:text-accent transition font-medium">Program</a>
           <a href="galeri.html" class="text-accent font-bold">Galeri</a>
-          <a href="kontak.html" class="text-white/80 hover:text-accent transition font-medium">Kontak</a>
-          <a href="kontak.html" class="bg-accent hover:bg-yellow-500 text-primary font-bold px-5 py-2.5 rounded-full transition-all shadow-lg">Hubungi Kami</a>
+          <a href="kontak.html" class="text-white/90 hover:text-accent transition font-medium">Kontak</a>
+          <a href="kontak.html" class="bg-accent hover:bg-accent-hover text-white font-bold px-5 py-2.5 rounded-full transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">Hubungi Kami</a>
         </div>
         <button id="mobile-menu-btn" class="md:hidden text-white p-2" aria-label="Menu"><i class="fa-solid fa-bars text-xl"></i></button>
       </div>
     </div>
     <div id="mobile-menu" class="hidden md:hidden bg-primary-dark/95 backdrop-blur-md border-t border-white/10">
       <div class="px-6 py-4 space-y-3">
-        <a href="index.html" class="block text-white/80 py-2">Beranda</a>
+        <a href="index.html" class="block text-white py-2 font-medium">Beranda</a>
+        <a href="index.html#tentang" class="block text-white/80 py-2">Tentang</a>
+        <a href="index.html#program" class="block text-white/80 py-2">Program</a>
         <a href="galeri.html" class="block text-accent font-bold py-2">Galeri</a>
         <a href="kontak.html" class="block text-white/80 py-2">Kontak</a>
-        <a href="kontak.html" class="inline-block bg-accent text-primary font-bold px-5 py-2.5 rounded-full mt-2">Hubungi Kami</a>
+        <a href="kontak.html" class="inline-block bg-accent hover:bg-accent-hover text-white font-bold px-5 py-2.5 rounded-full mt-2">Hubungi Kami</a>
       </div>
     </div>
   </nav>
@@ -69,33 +75,35 @@
       <div class="absolute -top-20 -right-20 w-80 h-80 bg-accent rounded-full blur-3xl"></div>
     </div>
     <div class="max-w-7xl mx-auto px-6 text-center relative z-10">
-      <span class="inline-block bg-accent/20 text-accent font-semibold px-4 py-1.5 rounded-full text-sm mb-4 border border-accent/30">Dokumentasi</span>
+      <span class="inline-block bg-accent/90 text-white font-semibold px-4 py-1.5 rounded-full text-sm mb-4 border border-accent/30 shadow-md">Dokumentasi</span>
       <h1 class="font-display text-4xl sm:text-5xl font-bold text-white mb-4">Galeri Kegiatan</h1>
-      <p class="text-white/70 max-w-xl mx-auto">Bukti nyata dedikasi kami dalam melindungi dan mendampingi anak-anak Indonesia.</p>
+      <p class="text-white/80 max-w-xl mx-auto">Bukti nyata dedikasi kami dalam melindungi dan mendampingi anak-anak Indonesia.</p>
     </div>
   </header>
 
   <!-- FILTER -->
-  <section class="py-12 bg-light">
+  <section class="py-12 bg-light min-h-[50vh]">
     <div class="max-w-7xl mx-auto px-6">
       <div class="flex flex-wrap justify-center gap-3 mb-10">
-        <button data-filter="all" class="px-5 py-2.5 rounded-full font-semibold text-sm transition-all bg-blue-600 text-white shadow-md">Semua</button>
-        <button data-filter="lapangan" class="px-5 py-2.5 rounded-full font-semibold text-sm transition-all bg-white text-gray-700 hover:bg-gray-100 shadow-sm">Kegiatan Lapangan</button>
-        <button data-filter="pelatihan" class="px-5 py-2.5 rounded-full font-semibold text-sm transition-all bg-white text-gray-700 hover:bg-gray-100 shadow-sm">Pelatihan</button>
-        <button data-filter="resmi" class="px-5 py-2.5 rounded-full font-semibold text-sm transition-all bg-white text-gray-700 hover:bg-gray-100 shadow-sm">Acara Resmi</button>
+        <button data-filter="all" class="px-5 py-2.5 rounded-full font-semibold text-sm transition-all bg-accent text-white shadow-md">Semua</button>
+        <button data-filter="hukum" class="px-5 py-2.5 rounded-full font-semibold text-sm transition-all bg-white text-gray-700 hover:bg-gray-100 shadow-sm border border-gray-200">Hukum</button>
+        <button data-filter="konseling" class="px-5 py-2.5 rounded-full font-semibold text-sm transition-all bg-white text-gray-700 hover:bg-gray-100 shadow-sm border border-gray-200">Konseling</button>
+        <button data-filter="rohani" class="px-5 py-2.5 rounded-full font-semibold text-sm transition-all bg-white text-gray-700 hover:bg-gray-100 shadow-sm border border-gray-200">Rohani & Mental</button>
+        <button data-filter="bakat" class="px-5 py-2.5 rounded-full font-semibold text-sm transition-all bg-white text-gray-700 hover:bg-gray-100 shadow-sm border border-gray-200">Minat Bakat</button>
+        <button data-filter="harian" class="px-5 py-2.5 rounded-full font-semibold text-sm transition-all bg-white text-gray-700 hover:bg-gray-100 shadow-sm border border-gray-200">Kegiatan Harian</button>
       </div>
 
       <!-- GALLERY GRID -->
       <div id="gallery-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-        <!-- Item 1 -->
-        <div class="gallery-item fade-up visible group cursor-pointer" data-category="lapangan">
-          <div class="relative overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition-all">
-            <img src="assets/images/gallery-1.jpg" alt="Pendampingan hukum anak di Jakarta, 2025" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-5">
+        <!-- Item Hukum -->
+        <div class="gallery-item fade-up visible group cursor-pointer" data-category="hukum">
+          <div class="relative overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition-all bg-gray-200">
+            <img src="https://via.placeholder.com/600x400?text=Pendampingan+Hukum" alt="Pendampingan hukum ABH di pengadilan" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-5">
               <div>
                 <p class="text-white font-semibold">Pendampingan Hukum Anak</p>
-                <p class="text-white/70 text-sm">Jakarta — 2025</p>
+                <p class="text-white/70 text-sm">Bandung — 2024</p>
               </div>
             </div>
             <div class="absolute top-3 right-3 bg-white/20 backdrop-blur-sm rounded-full w-10 h-10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
@@ -104,82 +112,67 @@
           </div>
         </div>
 
-        <!-- Item 2 -->
-        <div class="gallery-item fade-up visible group cursor-pointer" data-category="pelatihan">
-          <div class="relative overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition-all">
-            <img src="assets/images/gallery-2.jpg" alt="Workshop konseling psikologis, Bandung 2025" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-5">
+        <!-- Item Konseling -->
+        <div class="gallery-item fade-up visible group cursor-pointer" data-category="konseling">
+          <div class="relative overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition-all bg-gray-200">
+            <img src="https://via.placeholder.com/600x400?text=Assessment+Konseling" alt="Sesi assessment dan konseling anak" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-5">
               <div>
-                <p class="text-white font-semibold">Workshop Konseling Psikologis</p>
-                <p class="text-white/70 text-sm">Bandung — 2025</p>
+                <p class="text-white font-semibold">Assessment & Konseling Awal</p>
+                <p class="text-white/70 text-sm">YLAB — 2024</p>
               </div>
-            </div>
-            <div class="absolute top-3 right-3 bg-white/20 backdrop-blur-sm rounded-full w-10 h-10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
-              <i class="fa-solid fa-expand text-white"></i>
             </div>
           </div>
         </div>
 
-        <!-- Item 3 -->
-        <div class="gallery-item fade-up visible group cursor-pointer" data-category="resmi">
-          <div class="relative overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition-all">
-            <img src="assets/images/gallery-3.jpg" alt="Penandatanganan MoU dengan Kementerian PPPA, 2024" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-5">
+        <!-- Item Rohani -->
+        <div class="gallery-item fade-up visible group cursor-pointer" data-category="rohani">
+          <div class="relative overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition-all bg-gray-200">
+            <img src="https://via.placeholder.com/600x400?text=Bimbingan+Rohani" alt="Kegiatan pengajaran agama dan rohani" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-5">
               <div>
-                <p class="text-white font-semibold">MoU dengan Kementerian PPPA</p>
-                <p class="text-white/70 text-sm">Jakarta — 2024</p>
+                <p class="text-white font-semibold">Bimbingan Rohani & Pengajaran Agama</p>
+                <p class="text-white/70 text-sm">YLAB — Rutin</p>
               </div>
-            </div>
-            <div class="absolute top-3 right-3 bg-white/20 backdrop-blur-sm rounded-full w-10 h-10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
-              <i class="fa-solid fa-expand text-white"></i>
             </div>
           </div>
         </div>
 
-        <!-- Item 4 -->
-        <div class="gallery-item fade-up visible group cursor-pointer" data-category="lapangan">
-          <div class="relative overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition-all">
-            <img src="assets/images/gallery-4.jpg" alt="Kunjungan ke LPKA Tangerang, 2024" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-5">
+        <!-- Item Bakat -->
+        <div class="gallery-item fade-up visible group cursor-pointer" data-category="bakat">
+          <div class="relative overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition-all bg-gray-200">
+            <img src="https://via.placeholder.com/600x400?text=Reparasi+Kreatif" alt="Kegiatan reparasi kreatif dan keterampilan" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-5">
               <div>
-                <p class="text-white font-semibold">Kunjungan ke LPKA Tangerang</p>
-                <p class="text-white/70 text-sm">Tangerang — 2024</p>
+                <p class="text-white font-semibold">Pelatihan Reparasi Kreatif</p>
+                <p class="text-white/70 text-sm">Bandung — 2024</p>
               </div>
-            </div>
-            <div class="absolute top-3 right-3 bg-white/20 backdrop-blur-sm rounded-full w-10 h-10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
-              <i class="fa-solid fa-expand text-white"></i>
             </div>
           </div>
         </div>
 
-        <!-- Item 5 -->
-        <div class="gallery-item fade-up visible group cursor-pointer" data-category="pelatihan">
-          <div class="relative overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition-all">
-            <img src="assets/images/gallery-5.jpg" alt="Pelatihan paralegal anak, Surabaya 2024" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-5">
+        <!-- Item Harian -->
+        <div class="gallery-item fade-up visible group cursor-pointer" data-category="harian">
+          <div class="relative overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition-all bg-gray-200">
+            <img src="https://via.placeholder.com/600x400?text=Healing+Olahraga" alt="Kegiatan healing dan olahraga rutin" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-5">
               <div>
-                <p class="text-white font-semibold">Pelatihan Paralegal Anak</p>
-                <p class="text-white/70 text-sm">Surabaya — 2024</p>
+                <p class="text-white font-semibold">Healing & Olahraga Bersama</p>
+                <p class="text-white/70 text-sm">Bandung — Rutin</p>
               </div>
-            </div>
-            <div class="absolute top-3 right-3 bg-white/20 backdrop-blur-sm rounded-full w-10 h-10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
-              <i class="fa-solid fa-expand text-white"></i>
             </div>
           </div>
         </div>
-
-        <!-- Item 6 -->
-        <div class="gallery-item fade-up visible group cursor-pointer" data-category="resmi">
-          <div class="relative overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition-all">
-            <img src="assets/images/gallery-6.jpg" alt="Seminar nasional perlindungan anak, 2023" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-5">
+        
+        <!-- Item Harian -->
+        <div class="gallery-item fade-up visible group cursor-pointer" data-category="harian">
+          <div class="relative overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition-all bg-gray-200">
+            <img src="https://via.placeholder.com/600x400?text=Kegiatan+Kebersihan" alt="Kegiatan kebersihan lingkungan" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-5">
               <div>
-                <p class="text-white font-semibold">Seminar Nasional Perlindungan Anak</p>
-                <p class="text-white/70 text-sm">Yogyakarta — 2023</p>
+                <p class="text-white font-semibold">Kegiatan Kebersihan Asrama</p>
+                <p class="text-white/70 text-sm">YLAB — Rutin</p>
               </div>
-            </div>
-            <div class="absolute top-3 right-3 bg-white/20 backdrop-blur-sm rounded-full w-10 h-10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
-              <i class="fa-solid fa-expand text-white"></i>
             </div>
           </div>
         </div>
@@ -189,52 +182,50 @@
   </section>
 
   <!-- LIGHTBOX -->
-  <div id="lightbox" class="hidden fixed inset-0 z-[100] bg-black/90 backdrop-blur-sm items-center justify-center p-4">
-    <button id="lb-close" class="absolute top-6 right-6 text-white/70 hover:text-white text-3xl transition z-10" aria-label="Tutup"><i class="fa-solid fa-xmark"></i></button>
-    <button id="lb-prev" class="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 text-white/70 hover:text-white text-3xl transition z-10" aria-label="Sebelumnya"><i class="fa-solid fa-chevron-left"></i></button>
-    <button id="lb-next" class="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 text-white/70 hover:text-white text-3xl transition z-10" aria-label="Selanjutnya"><i class="fa-solid fa-chevron-right"></i></button>
+  <div id="lightbox" class="hidden fixed inset-0 z-[100] bg-black/95 backdrop-blur-md items-center justify-center p-4">
+    <button id="lb-close" class="absolute top-6 right-6 text-white/70 hover:text-accent text-4xl transition z-10" aria-label="Tutup"><i class="fa-solid fa-xmark"></i></button>
+    <button id="lb-prev" class="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 text-white/70 hover:text-accent text-4xl transition z-10" aria-label="Sebelumnya"><i class="fa-solid fa-chevron-left"></i></button>
+    <button id="lb-next" class="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 text-white/70 hover:text-accent text-4xl transition z-10" aria-label="Selanjutnya"><i class="fa-solid fa-chevron-right"></i></button>
     <div class="max-w-5xl w-full text-center">
-      <img id="lb-img" src="" alt="" class="max-h-[80vh] mx-auto rounded-xl shadow-2xl">
-      <p id="lb-caption" class="text-white/80 mt-4 text-lg"></p>
+      <img id="lb-img" src="" alt="" class="max-h-[80vh] mx-auto rounded-xl shadow-2xl border-4 border-white/10">
+      <p id="lb-caption" class="text-white mt-6 text-xl font-medium tracking-wide"></p>
     </div>
   </div>
 
   <!-- FOOTER -->
-  <footer class="bg-primary-dark text-white pt-16 pb-8">
+  <footer class="bg-[#0b1d31] text-white pt-16 pb-8">
     <div class="max-w-7xl mx-auto px-6">
       <div class="grid md:grid-cols-3 gap-12 mb-12">
         <div>
           <div class="flex items-center gap-3 mb-4">
-            <img src="assets/images/logo.png" alt="Logo" class="h-10 w-10 object-contain">
-            <span class="font-display font-bold text-lg">Lindungi Anak Bangsa</span>
+            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shrink-0">
+              <i class="fa-solid fa-shield-halved text-primary text-2xl"></i>
+            </div>
+            <span class="font-display font-bold text-xl text-white">YLAB</span>
           </div>
-          <p class="text-white/60 text-sm leading-relaxed">Lembaga nonprofit yang bergerak di bidang perlindungan anak yang berhadapan dengan hukum di Indonesia.</p>
+          <p class="text-white/60 text-sm leading-relaxed mb-4">Yayasan Lindungi Anak Bangsa<br>Lembaga Sosial / LKSA berfokus pada perlindungan Anak yang Berhadapan dengan Hukum.</p>
         </div>
         <div>
-          <h4 class="font-display font-bold text-lg mb-4">Navigasi</h4>
-          <ul class="space-y-2 text-white/60 text-sm">
-            <li><a href="index.html" class="hover:text-accent transition">Beranda</a></li>
-            <li><a href="galeri.html" class="hover:text-accent transition">Galeri</a></li>
-            <li><a href="kontak.html" class="hover:text-accent transition">Kontak</a></li>
+          <h4 class="font-display font-bold text-lg mb-4 text-accent">Navigasi</h4>
+          <ul class="space-y-2 text-white/70 text-sm">
+            <li><a href="index.html" class="hover:text-white transition">Beranda</a></li>
+            <li><a href="galeri.html" class="hover:text-white transition">Galeri Kegiatan</a></li>
+            <li><a href="kontak.html" class="hover:text-white transition">Kontak & Lokasi</a></li>
           </ul>
         </div>
         <div>
-          <h4 class="font-display font-bold text-lg mb-4">Kontak</h4>
-          <ul class="space-y-3 text-white/60 text-sm">
-            <li class="flex items-start gap-3"><i class="fa-solid fa-location-dot text-accent mt-1"></i> Jl. Keadilan No. 45, Jakarta Selatan 12345</li>
-            <li class="flex items-center gap-3"><i class="fa-solid fa-phone text-accent"></i> (021) 1234-5678</li>
-            <li class="flex items-center gap-3"><i class="fa-solid fa-envelope text-accent"></i> info@lindungianak.or.id</li>
+          <h4 class="font-display font-bold text-lg mb-4 text-accent">Hubungi Kami</h4>
+          <ul class="space-y-3 text-white/70 text-sm">
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-location-dot text-accent mt-1"></i> 
+              <span>Komp. Damarmas, Jl. Raya Damar Mas No. 10A, RT 006 RW 012, Desa Kamasan, Kec. Banjaran, Kabupaten Bandung, 40377</span>
+            </li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-phone text-accent"></i> 0813 1222 2206</li>
           </ul>
-          <div class="flex gap-4 mt-6">
-            <a href="#" class="w-10 h-10 bg-white/10 hover:bg-accent rounded-full flex items-center justify-center transition" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-            <a href="#" class="w-10 h-10 bg-white/10 hover:bg-accent rounded-full flex items-center justify-center transition" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" class="w-10 h-10 bg-white/10 hover:bg-accent rounded-full flex items-center justify-center transition" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#" class="w-10 h-10 bg-white/10 hover:bg-accent rounded-full flex items-center justify-center transition" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-          </div>
         </div>
       </div>
       <div class="border-t border-white/10 pt-8 text-center text-white/40 text-sm">
-        <p>&copy; 2026 Yayasan Lindungi Anak Bangsa. Seluruh hak dilindungi.</p>
+        <p>&copy; 2024 Yayasan Lindungi Anak Bangsa. Hak Cipta Dilindungi.</p>
       </div>
     </div>
   </footer>

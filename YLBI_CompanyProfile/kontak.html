@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kontak — Yayasan Lindungi Anak Bangsa</title>
-  <meta name="description" content="Hubungi Yayasan Lindungi Anak Bangsa untuk informasi program, kerjasama, atau bantuan pendampingan hukum anak.">
+  <meta name="description" content="Hubungi Yayasan Lindungi Anak Bangsa (YLAB) untuk informasi program, kerjasama, atau bantuan pendampingan hukum anak di Bandung.">
   <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,7 +16,7 @@
         extend: {
           colors: {
             primary: { DEFAULT:'#1A3A5C', light:'#2563EB', dark:'#0f2a47' },
-            accent: '#F59E0B',
+            accent: { DEFAULT:'#C0392B', hover:'#A93226' },
             light: '#F5F7FA',
           },
           fontFamily: {
@@ -41,23 +41,30 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
         <a href="index.html" class="flex items-center gap-3">
-          <img src="assets/images/logo.png" alt="Logo Yayasan" class="h-10 w-10 object-contain">
+          <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center shrink-0">
+            <i class="fa-solid fa-shield-halved text-primary text-xl"></i>
+          </div>
           <span class="text-white font-display font-bold text-lg leading-tight hidden sm:block">Lindungi Anak<br>Bangsa</span>
         </a>
         <div class="hidden md:flex items-center gap-8">
-          <a href="index.html" class="text-white/80 hover:text-accent transition font-medium">Beranda</a>
-          <a href="galeri.html" class="text-white/80 hover:text-accent transition font-medium">Galeri</a>
+          <a href="index.html" class="text-white/90 hover:text-accent transition font-medium">Beranda</a>
+          <a href="index.html#tentang" class="text-white/90 hover:text-accent transition font-medium">Tentang</a>
+          <a href="index.html#program" class="text-white/90 hover:text-accent transition font-medium">Program</a>
+          <a href="galeri.html" class="text-white/90 hover:text-accent transition font-medium">Galeri</a>
           <a href="kontak.html" class="text-accent font-bold">Kontak</a>
-          <a href="kontak.html" class="bg-accent hover:bg-yellow-500 text-primary font-bold px-5 py-2.5 rounded-full transition-all shadow-lg">Hubungi Kami</a>
+          <a href="kontak.html" class="bg-accent hover:bg-accent-hover text-white font-bold px-5 py-2.5 rounded-full transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">Hubungi Kami</a>
         </div>
         <button id="mobile-menu-btn" class="md:hidden text-white p-2" aria-label="Menu"><i class="fa-solid fa-bars text-xl"></i></button>
       </div>
     </div>
     <div id="mobile-menu" class="hidden md:hidden bg-primary-dark/95 backdrop-blur-md border-t border-white/10">
       <div class="px-6 py-4 space-y-3">
-        <a href="index.html" class="block text-white/80 py-2">Beranda</a>
+        <a href="index.html" class="block text-white py-2 font-medium">Beranda</a>
+        <a href="index.html#tentang" class="block text-white/80 py-2">Tentang</a>
+        <a href="index.html#program" class="block text-white/80 py-2">Program</a>
         <a href="galeri.html" class="block text-white/80 py-2">Galeri</a>
         <a href="kontak.html" class="block text-accent font-bold py-2">Kontak</a>
+        <a href="kontak.html" class="inline-block bg-accent hover:bg-accent-hover text-white font-bold px-5 py-2.5 rounded-full mt-2">Hubungi Kami</a>
       </div>
     </div>
   </nav>
@@ -68,9 +75,9 @@
       <div class="absolute -top-20 -left-20 w-80 h-80 bg-accent rounded-full blur-3xl"></div>
     </div>
     <div class="max-w-7xl mx-auto px-6 text-center relative z-10">
-      <span class="inline-block bg-accent/20 text-accent font-semibold px-4 py-1.5 rounded-full text-sm mb-4 border border-accent/30">Kontak</span>
-      <h1 class="font-display text-4xl sm:text-5xl font-bold text-white mb-4">Hubungi Kami</h1>
-      <p class="text-white/70 max-w-xl mx-auto">Kami siap membantu Anda. Jangan ragu untuk menghubungi kami melalui formulir di bawah atau kontak langsung.</p>
+      <span class="inline-block bg-accent/90 text-white font-semibold px-4 py-1.5 rounded-full text-sm mb-4 border border-accent/30 shadow-md">Hubungi Kami</span>
+      <h1 class="font-display text-4xl sm:text-5xl font-bold text-white mb-4">Informasi Kontak & Lokasi</h1>
+      <p class="text-white/80 max-w-xl mx-auto">Untuk kebutuhan pendampingan anak atau kerjasama, jangan ragu untuk menghubungi kami.</p>
     </div>
   </header>
 
@@ -81,41 +88,47 @@
 
         <!-- FORM -->
         <div class="lg:col-span-3 fade-up">
-          <div class="bg-white rounded-2xl shadow-lg p-8 md:p-10 border border-gray-100">
-            <h2 class="font-display text-2xl font-bold text-primary mb-2">Kirim Pesan</h2>
-            <p class="text-gray-500 mb-8">Isi formulir berikut dan tim kami akan menghubungi Anda dalam 1×24 jam.</p>
+          <div class="bg-white rounded-2xl shadow-lg p-8 md:p-10 border border-gray-100 border-t-4 border-t-accent">
+            <h2 class="font-display text-2xl font-bold text-primary mb-2">Kirim Pesan Langsung</h2>
+            <p class="text-gray-500 mb-8">Isi formulir ini jika Anda membutuhkan informasi program, konsultasi, atau ingin menjadi donatur/relawan.</p>
             <form id="contact-form" novalidate>
               <div class="grid sm:grid-cols-2 gap-5 mb-5">
                 <div>
-                  <label for="nama" class="block text-sm font-semibold text-gray-700 mb-1.5">Nama Lengkap <span class="text-red-500">*</span></label>
-                  <input id="nama" type="text" placeholder="Nama Anda" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary-light focus:ring-2 focus:ring-primary-light/20 outline-none transition text-sm">
-                  <p id="nama-error" class="hidden text-red-500 text-xs mt-1">Nama wajib diisi</p>
+                  <label for="nama" class="block text-sm font-semibold text-gray-700 mb-1.5">Nama Lengkap <span class="text-accent">*</span></label>
+                  <input id="nama" type="text" placeholder="Nama Anda" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-accent focus:ring-2 focus:ring-accent/20 outline-none transition text-sm">
+                  <p id="nama-error" class="hidden text-accent text-xs mt-1">Nama wajib diisi</p>
                 </div>
                 <div>
-                  <label for="email" class="block text-sm font-semibold text-gray-700 mb-1.5">Email <span class="text-red-500">*</span></label>
-                  <input id="email" type="email" placeholder="email@contoh.com" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary-light focus:ring-2 focus:ring-primary-light/20 outline-none transition text-sm">
-                  <p id="email-error" class="hidden text-red-500 text-xs mt-1">Email wajib diisi</p>
+                  <label for="email" class="block text-sm font-semibold text-gray-700 mb-1.5">Email (Opsional)</label>
+                  <input id="email" type="email" placeholder="email@contoh.com" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-accent focus:ring-2 focus:ring-accent/20 outline-none transition text-sm">
                 </div>
               </div>
               <div class="grid sm:grid-cols-2 gap-5 mb-5">
                 <div>
-                  <label for="telepon" class="block text-sm font-semibold text-gray-700 mb-1.5">Nomor Telepon <span class="text-red-500">*</span></label>
-                  <input id="telepon" type="tel" placeholder="08xxxxxxxxxx" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary-light focus:ring-2 focus:ring-primary-light/20 outline-none transition text-sm">
-                  <p id="telepon-error" class="hidden text-red-500 text-xs mt-1">Telepon wajib diisi</p>
+                  <label for="telepon" class="block text-sm font-semibold text-gray-700 mb-1.5">Nomor Telepon/WA <span class="text-accent">*</span></label>
+                  <input id="telepon" type="tel" placeholder="08xxxxxxxxxx" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-accent focus:ring-2 focus:ring-accent/20 outline-none transition text-sm">
+                  <p id="telepon-error" class="hidden text-accent text-xs mt-1">Nomor Telepon wajib diisi</p>
                 </div>
                 <div>
-                  <label for="subjek" class="block text-sm font-semibold text-gray-700 mb-1.5">Subjek <span class="text-red-500">*</span></label>
-                  <input id="subjek" type="text" placeholder="Topik pesan Anda" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary-light focus:ring-2 focus:ring-primary-light/20 outline-none transition text-sm">
-                  <p id="subjek-error" class="hidden text-red-500 text-xs mt-1">Subjek wajib diisi</p>
+                  <label for="keperluan" class="block text-sm font-semibold text-gray-700 mb-1.5">Keperluan <span class="text-accent">*</span></label>
+                  <select id="keperluan" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-accent focus:ring-2 focus:ring-accent/20 outline-none transition text-sm bg-white">
+                    <option value="">Pilih Keperluan...</option>
+                    <option value="Pendampingan Hukum">Pendampingan Hukum ABH</option>
+                    <option value="Konseling">Layanan Konseling</option>
+                    <option value="Donasi">Donasi / Sponsorship</option>
+                    <option value="Kerjasama">Kerjasama Kelembagaan</option>
+                    <option value="Lainnya">Informasi Lainnya</option>
+                  </select>
+                  <p id="keperluan-error" class="hidden text-accent text-xs mt-1">Keperluan wajib dipilih</p>
                 </div>
               </div>
               <div class="mb-6">
-                <label for="pesan" class="block text-sm font-semibold text-gray-700 mb-1.5">Pesan <span class="text-red-500">*</span></label>
-                <textarea id="pesan" rows="5" placeholder="Tulis pesan Anda di sini..." class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-primary-light focus:ring-2 focus:ring-primary-light/20 outline-none transition text-sm resize-none"></textarea>
-                <p id="pesan-error" class="hidden text-red-500 text-xs mt-1">Pesan wajib diisi</p>
+                <label for="pesan" class="block text-sm font-semibold text-gray-700 mb-1.5">Pesan Singkat <span class="text-accent">*</span></label>
+                <textarea id="pesan" rows="5" placeholder="Ceritakan secara singkat keperluan Anda..." class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-accent focus:ring-2 focus:ring-accent/20 outline-none transition text-sm resize-none"></textarea>
+                <p id="pesan-error" class="hidden text-accent text-xs mt-1">Pesan wajib diisi</p>
               </div>
-              <button type="submit" class="w-full bg-primary-light hover:bg-blue-700 text-white font-bold py-3.5 rounded-xl transition-all shadow-lg hover:shadow-xl text-lg">
-                <i class="fa-solid fa-paper-plane mr-2"></i>Kirim Pesan
+              <button type="submit" class="w-full bg-accent hover:bg-accent-hover text-white font-bold py-3.5 rounded-xl transition-all shadow-lg hover:shadow-xl text-lg flex justify-center items-center gap-2">
+                <i class="fa-solid fa-paper-plane"></i> Kirim Pesan
               </button>
             </form>
           </div>
@@ -125,65 +138,47 @@
         <div class="lg:col-span-2 space-y-6 fade-up">
           <!-- Contact Info -->
           <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
-            <h3 class="font-display text-xl font-bold text-primary mb-6">Informasi Kontak</h3>
-            <div class="space-y-5">
+            <h3 class="font-display text-xl font-bold text-primary mb-6">Info Resmi YLAB</h3>
+            <div class="space-y-6">
               <div class="flex items-start gap-4">
-                <div class="w-12 h-12 bg-primary-light/10 rounded-xl flex items-center justify-center shrink-0">
-                  <i class="fa-solid fa-location-dot text-primary-light text-lg"></i>
+                <div class="w-12 h-12 bg-primary/5 rounded-xl flex items-center justify-center shrink-0 border border-primary/10">
+                  <i class="fa-solid fa-location-dot text-primary text-xl"></i>
                 </div>
                 <div>
-                  <p class="font-semibold text-primary text-sm">Alamat Kantor</p>
-                  <p class="text-gray-500 text-sm">Jl. Keadilan No. 45, Kebayoran Baru, Jakarta Selatan 12345</p>
+                  <p class="font-semibold text-primary text-sm mb-1">Lokasi Yayasan</p>
+                  <p class="text-gray-600 text-sm leading-relaxed">Komp. Damarmas, Jl. Raya Damar Mas No. 10A, RT 006 RW 012, Desa Kamasan, Kec. Banjaran, Kabupaten Bandung, 40377</p>
                 </div>
               </div>
               <div class="flex items-start gap-4">
-                <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center shrink-0">
-                  <i class="fa-solid fa-phone text-accent text-lg"></i>
+                <div class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center shrink-0 border border-accent/20">
+                  <i class="fa-brands fa-whatsapp text-accent text-xl"></i>
                 </div>
                 <div>
-                  <p class="font-semibold text-primary text-sm">Telepon</p>
-                  <p class="text-gray-500 text-sm">(021) 1234-5678</p>
-                </div>
-              </div>
-              <div class="flex items-start gap-4">
-                <div class="w-12 h-12 bg-green-500/10 rounded-xl flex items-center justify-center shrink-0">
-                  <i class="fa-solid fa-envelope text-green-600 text-lg"></i>
-                </div>
-                <div>
-                  <p class="font-semibold text-primary text-sm">Email</p>
-                  <p class="text-gray-500 text-sm">info@lindungianak.or.id</p>
+                  <p class="font-semibold text-primary text-sm mb-1">Telepon / WhatsApp</p>
+                  <p class="text-gray-600 font-medium">0813 1222 2206</p>
                 </div>
               </div>
             </div>
           </div>
-          <!-- Operating Hours -->
-          <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
-            <h3 class="font-display text-xl font-bold text-primary mb-4">Jam Operasional</h3>
-            <div class="space-y-2 text-sm">
-              <div class="flex justify-between"><span class="text-gray-500">Senin – Jumat</span><span class="font-semibold text-primary">08.00 – 17.00 WIB</span></div>
-              <div class="flex justify-between"><span class="text-gray-500">Sabtu</span><span class="font-semibold text-primary">09.00 – 14.00 WIB</span></div>
-              <div class="flex justify-between"><span class="text-gray-500">Minggu</span><span class="font-semibold text-red-500">Tutup</span></div>
-            </div>
-          </div>
+          
           <!-- Social Media -->
-          <div class="bg-primary rounded-2xl shadow-lg p-8">
-            <h3 class="font-display text-xl font-bold text-white mb-4">Media Sosial</h3>
-            <div class="grid grid-cols-2 gap-3">
-              <a href="#" class="flex items-center gap-3 bg-white/10 hover:bg-white/20 rounded-xl px-4 py-3 transition">
-                <i class="fa-brands fa-whatsapp text-green-400 text-xl"></i>
-                <span class="text-white text-sm font-medium">WhatsApp</span>
+          <div class="bg-primary rounded-2xl shadow-lg p-8 relative overflow-hidden">
+            <div class="absolute -right-8 -bottom-8 opacity-10 text-9xl"><i class="fa-solid fa-hashtag"></i></div>
+            <h3 class="font-display text-xl font-bold text-white mb-4 relative z-10">Terkoneksi dengan Kami</h3>
+            <div class="grid gap-3 relative z-10">
+              <a href="https://wa.me/6281312222206" target="_blank" class="flex items-center justify-between bg-white/10 hover:bg-white/20 rounded-xl px-5 py-4 transition group border border-white/5">
+                <div class="flex items-center gap-3">
+                  <i class="fa-brands fa-whatsapp text-green-400 text-xl"></i>
+                  <span class="text-white text-sm font-medium">WhatsApp Admin</span>
+                </div>
+                <i class="fa-solid fa-arrow-right text-white/50 group-hover:text-white transition group-hover:translate-x-1"></i>
               </a>
-              <a href="#" class="flex items-center gap-3 bg-white/10 hover:bg-white/20 rounded-xl px-4 py-3 transition">
-                <i class="fa-brands fa-instagram text-pink-400 text-xl"></i>
-                <span class="text-white text-sm font-medium">Instagram</span>
-              </a>
-              <a href="#" class="flex items-center gap-3 bg-white/10 hover:bg-white/20 rounded-xl px-4 py-3 transition">
-                <i class="fa-brands fa-facebook text-blue-400 text-xl"></i>
-                <span class="text-white text-sm font-medium">Facebook</span>
-              </a>
-              <a href="#" class="flex items-center gap-3 bg-white/10 hover:bg-white/20 rounded-xl px-4 py-3 transition">
-                <i class="fa-brands fa-youtube text-red-400 text-xl"></i>
-                <span class="text-white text-sm font-medium">YouTube</span>
+              <a href="#" class="flex items-center justify-between bg-white/10 hover:bg-white/20 rounded-xl px-5 py-4 transition group border border-white/5">
+                <div class="flex items-center gap-3">
+                  <i class="fa-brands fa-instagram text-pink-400 text-xl"></i>
+                  <span class="text-white text-sm font-medium">Instagram YLAB</span>
+                </div>
+                <i class="fa-solid fa-arrow-right text-white/50 group-hover:text-white transition group-hover:translate-x-1"></i>
               </a>
             </div>
           </div>
@@ -194,14 +189,18 @@
   </section>
 
   <!-- MAP -->
-  <section class="bg-white py-16">
+  <section class="bg-white py-16 border-t border-gray-100">
     <div class="max-w-7xl mx-auto px-6 fade-up">
-      <h2 class="font-display text-2xl font-bold text-primary text-center mb-8">Lokasi Kantor Kami</h2>
-      <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-100">
+      <div class="text-center mb-8">
+        <h2 class="font-display text-2xl font-bold text-primary mb-2">Lokasi Kami di Peta</h2>
+        <p class="text-gray-500 text-sm">Komp. Damarmas, Desa Kamasan, Banjaran, Kab. Bandung</p>
+      </div>
+      <div class="rounded-2xl overflow-hidden shadow-xl border border-gray-200 relative bg-gray-100">
+        <!-- Coordinate based on address: Banjaran, Kab Bandung -->
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.2!2d106.8!3d-6.24!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMTQnMjQuMCJTIDEwNsKwNDgnMDAuMCJF!5e0!3m2!1sid!2sid!4v1600000000000"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15838.71184323675!2d107.5670868!3d-7.0470984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68ebe2574e5487%3A0xc3f8af6d9622d10e!2sKamasan%2C%20Kec.%20Banjaran%2C%20Kabupaten%20Bandung%2C%20Jawa%20Barat!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid"
           width="100%"
-          height="400"
+          height="450"
           style="border:0;"
           allowfullscreen=""
           loading="lazy"
@@ -213,47 +212,45 @@
   </section>
 
   <!-- SUCCESS TOAST -->
-  <div id="toast-success" class="hidden fixed bottom-6 right-6 z-[200] bg-green-600 text-white px-6 py-4 rounded-xl shadow-2xl flex items-center gap-3 animate-bounce">
+  <div id="toast-success" class="hidden fixed bottom-6 right-6 z-[200] bg-green-600 text-white px-6 py-4 rounded-xl shadow-2xl flex items-center gap-3 animate-bounce border-2 border-white/20">
     <i class="fa-solid fa-circle-check text-xl"></i>
-    <span class="font-semibold">Pesan berhasil dikirim! Kami akan segera menghubungi Anda.</span>
+    <span class="font-semibold">Pesan terkirim! Admin YLAB akan segera membalas.</span>
   </div>
 
   <!-- FOOTER -->
-  <footer class="bg-primary-dark text-white pt-16 pb-8">
+  <footer class="bg-[#0b1d31] text-white pt-16 pb-8">
     <div class="max-w-7xl mx-auto px-6">
       <div class="grid md:grid-cols-3 gap-12 mb-12">
         <div>
           <div class="flex items-center gap-3 mb-4">
-            <img src="assets/images/logo.png" alt="Logo" class="h-10 w-10 object-contain">
-            <span class="font-display font-bold text-lg">Lindungi Anak Bangsa</span>
+            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center shrink-0">
+              <i class="fa-solid fa-shield-halved text-primary text-2xl"></i>
+            </div>
+            <span class="font-display font-bold text-xl text-white">YLAB</span>
           </div>
-          <p class="text-white/60 text-sm leading-relaxed">Lembaga nonprofit yang bergerak di bidang perlindungan anak yang berhadapan dengan hukum di Indonesia.</p>
+          <p class="text-white/60 text-sm leading-relaxed mb-4">Yayasan Lindungi Anak Bangsa<br>Lembaga Sosial / LKSA berfokus pada perlindungan Anak yang Berhadapan dengan Hukum.</p>
         </div>
         <div>
-          <h4 class="font-display font-bold text-lg mb-4">Navigasi</h4>
-          <ul class="space-y-2 text-white/60 text-sm">
-            <li><a href="index.html" class="hover:text-accent transition">Beranda</a></li>
-            <li><a href="galeri.html" class="hover:text-accent transition">Galeri</a></li>
-            <li><a href="kontak.html" class="hover:text-accent transition">Kontak</a></li>
+          <h4 class="font-display font-bold text-lg mb-4 text-accent">Navigasi</h4>
+          <ul class="space-y-2 text-white/70 text-sm">
+            <li><a href="index.html" class="hover:text-white transition">Beranda</a></li>
+            <li><a href="galeri.html" class="hover:text-white transition">Galeri Kegiatan</a></li>
+            <li><a href="kontak.html" class="hover:text-white transition">Kontak & Lokasi</a></li>
           </ul>
         </div>
         <div>
-          <h4 class="font-display font-bold text-lg mb-4">Kontak</h4>
-          <ul class="space-y-3 text-white/60 text-sm">
-            <li class="flex items-start gap-3"><i class="fa-solid fa-location-dot text-accent mt-1"></i> Jl. Keadilan No. 45, Jakarta Selatan 12345</li>
-            <li class="flex items-center gap-3"><i class="fa-solid fa-phone text-accent"></i> (021) 1234-5678</li>
-            <li class="flex items-center gap-3"><i class="fa-solid fa-envelope text-accent"></i> info@lindungianak.or.id</li>
+          <h4 class="font-display font-bold text-lg mb-4 text-accent">Hubungi Kami</h4>
+          <ul class="space-y-3 text-white/70 text-sm">
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-location-dot text-accent mt-1"></i> 
+              <span>Komp. Damarmas, Jl. Raya Damar Mas No. 10A, RT 006 RW 012, Desa Kamasan, Kec. Banjaran, Kabupaten Bandung, 40377</span>
+            </li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-phone text-accent"></i> 0813 1222 2206</li>
           </ul>
-          <div class="flex gap-4 mt-6">
-            <a href="#" class="w-10 h-10 bg-white/10 hover:bg-accent rounded-full flex items-center justify-center transition" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-            <a href="#" class="w-10 h-10 bg-white/10 hover:bg-accent rounded-full flex items-center justify-center transition" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" class="w-10 h-10 bg-white/10 hover:bg-accent rounded-full flex items-center justify-center transition" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#" class="w-10 h-10 bg-white/10 hover:bg-accent rounded-full flex items-center justify-center transition" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-          </div>
         </div>
       </div>
       <div class="border-t border-white/10 pt-8 text-center text-white/40 text-sm">
-        <p>&copy; 2026 Yayasan Lindungi Anak Bangsa. Seluruh hak dilindungi.</p>
+        <p>&copy; 2024 Yayasan Lindungi Anak Bangsa. Hak Cipta Dilindungi.</p>
       </div>
     </div>
   </footer>
