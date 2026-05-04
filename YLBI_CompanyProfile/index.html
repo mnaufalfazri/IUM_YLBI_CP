@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yayasan Lindungi Anak Bangsa — Perlindungan Anak Indonesia</title>
+  <meta name="description" content="Yayasan Lindungi Anak Bangsa adalah lembaga nonprofit yang bergerak di bidang perlindungan anak yang terjerat masalah hukum di Indonesia.">
+  <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: { DEFAULT:'#1A3A5C', light:'#2563EB', dark:'#0f2a47' },
+            accent: '#F59E0B',
+            light: '#F5F7FA',
+          },
+          fontFamily: {
+            display: ['"Playfair Display"', 'serif'],
+            body: ['"Source Sans 3"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    * { font-family: 'Source Sans 3', sans-serif; }
+    h1,h2,h3,h4,h5,h6 { font-family: 'Playfair Display', serif; }
+    .fade-up { opacity:0; transform:translateY(30px); transition:opacity .7s ease, transform .7s ease; }
+    .fade-up.visible { opacity:1; transform:translateY(0); }
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="bg-white text-gray-800 antialiased">
+
+  <!-- ========== NAVBAR ========== -->
+  <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-transparent">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3">
+          <img src="assets/images/logo.png" alt="Logo Yayasan Lindungi Anak Bangsa" class="h-10 w-10 object-contain">
+          <span class="text-white font-display font-bold text-lg leading-tight hidden sm:block">Lindungi Anak<br>Bangsa</span>
+        </a>
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center gap-8">
+          <a href="index.html" class="text-white/90 hover:text-accent transition font-medium">Beranda</a>
+          <a href="galeri.html" class="text-white/90 hover:text-accent transition font-medium">Galeri</a>
+          <a href="kontak.html" class="text-white/90 hover:text-accent transition font-medium">Kontak</a>
+          <a href="kontak.html" class="bg-accent hover:bg-yellow-500 text-primary font-bold px-5 py-2.5 rounded-full transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">Hubungi Kami</a>
+        </div>
+        <!-- Mobile Button -->
+        <button id="mobile-menu-btn" class="md:hidden text-white p-2" aria-label="Menu">
+          <i class="fa-solid fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-primary-dark/95 backdrop-blur-md border-t border-white/10">
+      <div class="px-6 py-4 space-y-3">
+        <a href="index.html" class="block text-white py-2 font-medium">Beranda</a>
+        <a href="galeri.html" class="block text-white/80 py-2">Galeri</a>
+        <a href="kontak.html" class="block text-white/80 py-2">Kontak</a>
+        <a href="kontak.html" class="inline-block bg-accent text-primary font-bold px-5 py-2.5 rounded-full mt-2">Hubungi Kami</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <header id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <!-- BG -->
+    <div class="absolute inset-0">
+      <img src="assets/images/hero.jpg" alt="Anak-anak Indonesia" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-br from-primary-dark/90 via-primary/80 to-primary-light/60"></div>
+    </div>
+    <!-- Decorative circles -->
+    <div class="absolute -top-32 -right-32 w-96 h-96 bg-accent/10 rounded-full blur-3xl"></div>
+    <div class="absolute -bottom-32 -left-32 w-96 h-96 bg-primary-light/20 rounded-full blur-3xl"></div>
+    <!-- Content -->
+    <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
+      <span class="inline-block bg-accent/20 text-accent font-semibold px-4 py-1.5 rounded-full text-sm mb-6 backdrop-blur-sm border border-accent/30">Yayasan Lindungi Anak Bangsa</span>
+      <h1 class="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
+        Melindungi Masa Depan <span class="text-accent">Anak Indonesia</span>
+      </h1>
+      <p class="text-lg sm:text-xl text-white/80 max-w-2xl mx-auto mb-10 font-light leading-relaxed">
+        Memberikan pendampingan hukum, konseling, dan reintegrasi sosial bagi anak-anak yang terjerat masalah hukum — karena setiap anak berhak atas kesempatan kedua.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="kontak.html" class="bg-accent hover:bg-yellow-500 text-primary font-bold px-8 py-4 rounded-full text-lg transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1">
+          <i class="fa-solid fa-phone mr-2"></i>Hubungi Kami
+        </a>
+        <a href="#program" class="border-2 border-white/40 hover:border-white text-white font-semibold px-8 py-4 rounded-full text-lg transition-all hover:bg-white/10">
+          Pelajari Program <i class="fa-solid fa-arrow-down ml-2"></i>
+        </a>
+      </div>
+    </div>
+    <!-- Scroll Indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+      <i class="fa-solid fa-chevron-down text-white/50 text-2xl"></i>
+    </div>
+  </header>
+
+  <!-- ========== ABOUT ========== -->
+  <section id="tentang" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <!-- Text -->
+        <div class="fade-up">
+          <span class="text-primary-light font-semibold text-sm tracking-widest uppercase">Tentang Kami</span>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold text-primary mt-2 mb-6">Berdiri Untuk Keadilan & Harapan Anak</h2>
+          <p class="text-gray-600 leading-relaxed mb-4">
+            Yayasan Lindungi Anak Bangsa didirikan pada tahun 2018 oleh sekelompok advokat dan pekerja sosial yang prihatin dengan tingginya kasus anak yang berhadapan dengan hukum di Indonesia.
+          </p>
+          <p class="text-gray-600 leading-relaxed mb-6">
+            Kami percaya bahwa setiap anak, terlepas dari kesalahan yang pernah dilakukannya, berhak mendapatkan perlindungan, bimbingan, dan kesempatan untuk membangun masa depan yang lebih baik.
+          </p>
+          <div class="space-y-3">
+            <div class="flex items-start gap-3">
+              <i class="fa-solid fa-bullseye text-accent mt-1"></i>
+              <div><strong class="text-primary">Visi:</strong> <span class="text-gray-600">Mewujudkan Indonesia yang melindungi dan memulihkan hak-hak anak yang berkonflik dengan hukum.</span></div>
+            </div>
+            <div class="flex items-start gap-3">
+              <i class="fa-solid fa-rocket text-accent mt-1"></i>
+              <div><strong class="text-primary">Misi:</strong> <span class="text-gray-600">Memberikan pendampingan hukum, konseling psikologis, dan program reintegrasi sosial yang berkelanjutan.</span></div>
+            </div>
+          </div>
+        </div>
+        <!-- Stats -->
+        <div class="fade-up">
+          <div class="grid grid-cols-2 gap-6">
+            <div class="bg-light rounded-2xl p-8 text-center border border-gray-100 hover:shadow-lg transition-shadow">
+              <div class="text-4xl font-bold text-primary-light mb-1" data-count="1500" data-suffix="+">0</div>
+              <p class="text-gray-500 text-sm">Anak Didampingi</p>
+            </div>
+            <div class="bg-light rounded-2xl p-8 text-center border border-gray-100 hover:shadow-lg transition-shadow">
+              <div class="text-4xl font-bold text-accent mb-1" data-count="7" data-suffix="">0</div>
+              <p class="text-gray-500 text-sm">Tahun Berdiri</p>
+            </div>
+            <div class="bg-light rounded-2xl p-8 text-center border border-gray-100 hover:shadow-lg transition-shadow">
+              <div class="text-4xl font-bold text-primary-light mb-1" data-count="15" data-suffix="">0</div>
+              <p class="text-gray-500 text-sm">Provinsi Jangkauan</p>
+            </div>
+            <div class="bg-light rounded-2xl p-8 text-center border border-gray-100 hover:shadow-lg transition-shadow">
+              <div class="text-4xl font-bold text-accent mb-1" data-count="50" data-suffix="+">0</div>
+              <p class="text-gray-500 text-sm">Mitra & Lembaga</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROGRAM ========== -->
+  <section id="program" class="py-24 bg-light">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16 fade-up">
+        <span class="text-primary-light font-semibold text-sm tracking-widest uppercase">Program Kami</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-primary mt-2">Program Utama Yayasan</h2>
+        <p class="text-gray-500 mt-4 max-w-2xl mx-auto">Kami menjalankan tiga program utama yang dirancang untuk melindungi, mendampingi, dan memulihkan anak-anak yang berhadapan dengan hukum.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div class="fade-up bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group hover:-translate-y-2">
+          <div class="w-16 h-16 bg-primary-light/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary-light/20 transition">
+            <i class="fa-solid fa-scale-balanced text-primary-light text-2xl"></i>
+          </div>
+          <h3 class="font-display text-xl font-bold text-primary mb-3">Pendampingan Hukum</h3>
+          <p class="text-gray-500 leading-relaxed">Kami menyediakan advokat profesional yang mendampingi anak dalam setiap tahap proses hukum, memastikan hak-hak mereka terlindungi sesuai UU Sistem Peradilan Pidana Anak.</p>
+        </div>
+        <!-- Card 2 -->
+        <div class="fade-up bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group hover:-translate-y-2">
+          <div class="w-16 h-16 bg-accent/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-accent/20 transition">
+            <i class="fa-solid fa-heart-pulse text-accent text-2xl"></i>
+          </div>
+          <h3 class="font-display text-xl font-bold text-primary mb-3">Konseling Psikologis</h3>
+          <p class="text-gray-500 leading-relaxed">Tim psikolog kami memberikan dukungan emosional dan mental bagi anak dan keluarganya, membantu proses pemulihan trauma akibat proses hukum yang dihadapi.</p>
+        </div>
+        <!-- Card 3 -->
+        <div class="fade-up bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group hover:-translate-y-2">
+          <div class="w-16 h-16 bg-green-500/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-green-500/20 transition">
+            <i class="fa-solid fa-people-group text-green-600 text-2xl"></i>
+          </div>
+          <h3 class="font-display text-xl font-bold text-primary mb-3">Reintegrasi Sosial</h3>
+          <p class="text-gray-500 leading-relaxed">Program pelatihan keterampilan, pendidikan informal, dan pendampingan sosial untuk membantu anak kembali ke masyarakat dengan bekal yang memadai.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== MENGAPA KAMI ========== -->
+  <section id="mengapa" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16 fade-up">
+        <span class="text-primary-light font-semibold text-sm tracking-widest uppercase">Mengapa Kami</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-primary mt-2">Nilai-Nilai yang Kami Pegang</h2>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="fade-up text-center group">
+          <div class="w-20 h-20 mx-auto bg-primary/5 rounded-full flex items-center justify-center mb-4 group-hover:bg-primary/10 transition">
+            <i class="fa-solid fa-shield-halved text-primary text-3xl"></i>
+          </div>
+          <h4 class="font-display font-bold text-primary text-lg mb-2">Profesional</h4>
+          <p class="text-gray-500 text-sm">Didukung oleh advokat dan psikolog bersertifikat dengan pengalaman bertahun-tahun.</p>
+        </div>
+        <div class="fade-up text-center group">
+          <div class="w-20 h-20 mx-auto bg-accent/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-accent/20 transition">
+            <i class="fa-solid fa-scale-unbalanced text-accent text-3xl"></i>
+          </div>
+          <h4 class="font-display font-bold text-primary text-lg mb-2">Independen</h4>
+          <p class="text-gray-500 text-sm">Tidak berafiliasi dengan partai atau kelompok politik mana pun.</p>
+        </div>
+        <div class="fade-up text-center group">
+          <div class="w-20 h-20 mx-auto bg-primary-light/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-primary-light/20 transition">
+            <i class="fa-solid fa-child-reaching text-primary-light text-3xl"></i>
+          </div>
+          <h4 class="font-display font-bold text-primary text-lg mb-2">Berpihak pada Anak</h4>
+          <p class="text-gray-500 text-sm">Kepentingan terbaik anak selalu menjadi prioritas utama kami.</p>
+        </div>
+        <div class="fade-up text-center group">
+          <div class="w-20 h-20 mx-auto bg-green-500/10 rounded-full flex items-center justify-center mb-4 group-hover:bg-green-500/20 transition">
+            <i class="fa-solid fa-handshake text-green-600 text-3xl"></i>
+          </div>
+          <h4 class="font-display font-bold text-primary text-lg mb-2">Transparan</h4>
+          <p class="text-gray-500 text-sm">Laporan kegiatan dan keuangan yang terbuka untuk publik dan mitra.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TESTIMONI ========== -->
+  <section id="testimoni" class="py-24 bg-primary relative overflow-hidden">
+    <div class="absolute inset-0 opacity-5">
+      <div class="absolute top-10 left-10 w-64 h-64 bg-accent rounded-full blur-3xl"></div>
+      <div class="absolute bottom-10 right-10 w-64 h-64 bg-primary-light rounded-full blur-3xl"></div>
+    </div>
+    <div class="max-w-5xl mx-auto px-6 relative z-10">
+      <div class="text-center mb-16 fade-up">
+        <span class="text-accent font-semibold text-sm tracking-widest uppercase">Testimoni</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mt-2">Apa Kata Mereka</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="fade-up bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+          <i class="fa-solid fa-quote-left text-accent text-3xl mb-4"></i>
+          <p class="text-white/90 leading-relaxed mb-6 italic">"Yayasan ini benar-benar membantu anak saya mendapatkan keadilan. Mereka tidak hanya mendampingi di pengadilan, tapi juga memberikan dukungan psikologis yang sangat dibutuhkan keluarga kami."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center">
+              <i class="fa-solid fa-user text-accent"></i>
+            </div>
+            <div>
+              <p class="text-white font-semibold">Ibu Sari Rahmawati</p>
+              <p class="text-white/50 text-sm">Orang Tua Penerima Manfaat</p>
+            </div>
+          </div>
+        </div>
+        <div class="fade-up bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+          <i class="fa-solid fa-quote-left text-accent text-3xl mb-4"></i>
+          <p class="text-white/90 leading-relaxed mb-6 italic">"Sebagai mitra, kami melihat langsung dedikasi dan profesionalisme tim yayasan dalam menangani setiap kasus. Mereka benar-benar bekerja dengan hati untuk anak-anak Indonesia."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center">
+              <i class="fa-solid fa-user-tie text-accent"></i>
+            </div>
+            <div>
+              <p class="text-white font-semibold">Dr. Ahmad Fauzi, S.H.</p>
+              <p class="text-white/50 text-sm">Ketua Lembaga Bantuan Hukum</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CTA ========== -->
+  <section id="cta" class="py-24 bg-gradient-to-br from-primary-light to-primary relative overflow-hidden">
+    <div class="absolute inset-0">
+      <div class="absolute top-0 right-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl"></div>
+    </div>
+    <div class="max-w-4xl mx-auto px-6 text-center relative z-10 fade-up">
+      <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">Bersama, Kita Bisa Melindungi Masa Depan Mereka</h2>
+      <p class="text-white/80 text-lg mb-10 max-w-2xl mx-auto">Bergabunglah sebagai mitra, donatur, atau relawan. Setiap kontribusi Anda berarti bagi anak-anak yang membutuhkan perlindungan.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="kontak.html" class="bg-accent hover:bg-yellow-500 text-primary font-bold px-8 py-4 rounded-full text-lg transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1">
+          <i class="fa-solid fa-handshake mr-2"></i>Menjadi Mitra
+        </a>
+        <a href="kontak.html" class="border-2 border-white/40 hover:border-white text-white font-semibold px-8 py-4 rounded-full text-lg transition-all hover:bg-white/10">
+          <i class="fa-solid fa-envelope mr-2"></i>Hubungi Kami
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="bg-primary-dark text-white pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-3 gap-12 mb-12">
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <img src="assets/images/logo.png" alt="Logo" class="h-10 w-10 object-contain">
+            <span class="font-display font-bold text-lg">Lindungi Anak Bangsa</span>
+          </div>
+          <p class="text-white/60 text-sm leading-relaxed">Lembaga nonprofit yang bergerak di bidang perlindungan anak yang berhadapan dengan hukum di Indonesia.</p>
+        </div>
+        <div>
+          <h4 class="font-display font-bold text-lg mb-4">Navigasi</h4>
+          <ul class="space-y-2 text-white/60 text-sm">
+            <li><a href="index.html" class="hover:text-accent transition">Beranda</a></li>
+            <li><a href="#tentang" class="hover:text-accent transition">Tentang Kami</a></li>
+            <li><a href="#program" class="hover:text-accent transition">Program</a></li>
+            <li><a href="galeri.html" class="hover:text-accent transition">Galeri</a></li>
+            <li><a href="kontak.html" class="hover:text-accent transition">Kontak</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-display font-bold text-lg mb-4">Kontak</h4>
+          <ul class="space-y-3 text-white/60 text-sm">
+            <li class="flex items-start gap-3"><i class="fa-solid fa-location-dot text-accent mt-1"></i> Jl. Keadilan No. 45, Jakarta Selatan 12345</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-phone text-accent"></i> (021) 1234-5678</li>
+            <li class="flex items-center gap-3"><i class="fa-solid fa-envelope text-accent"></i> info@lindungianak.or.id</li>
+          </ul>
+          <div class="flex gap-4 mt-6">
+            <a href="#" class="w-10 h-10 bg-white/10 hover:bg-accent rounded-full flex items-center justify-center transition" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="#" class="w-10 h-10 bg-white/10 hover:bg-accent rounded-full flex items-center justify-center transition" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="w-10 h-10 bg-white/10 hover:bg-accent rounded-full flex items-center justify-center transition" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="w-10 h-10 bg-white/10 hover:bg-accent rounded-full flex items-center justify-center transition" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-white/10 pt-8 text-center text-white/40 text-sm">
+        <p>&copy; 2026 Yayasan Lindungi Anak Bangsa. Seluruh hak dilindungi.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
