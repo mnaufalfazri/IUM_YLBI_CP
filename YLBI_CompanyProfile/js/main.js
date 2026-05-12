@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Page-specific
   if (document.getElementById('gallery-grid')) initGallery();
-  if (document.getElementById('contact-form')) initContactForm();
 });
 
 // ──────────────── NAVBAR ────────────────
@@ -38,10 +37,10 @@ function initNavbar() {
   window.addEventListener('scroll', () => {
     if (!navbar) return;
     if (window.scrollY > 50) {
-      navbar.classList.add('bg-[#0f2a47]/95', 'shadow-lg', 'backdrop-blur-md');
+      navbar.classList.add('bg-primary-dark/95', 'shadow-lg', 'backdrop-blur-md');
       navbar.classList.remove('bg-transparent');
     } else {
-      navbar.classList.remove('bg-[#0f2a47]/95', 'shadow-lg', 'backdrop-blur-md');
+      navbar.classList.remove('bg-primary-dark/95', 'shadow-lg', 'backdrop-blur-md');
       navbar.classList.add('bg-transparent');
     }
   });
@@ -186,57 +185,6 @@ function initGallery() {
     if (e.key === 'Escape') closeLightbox();
     if (e.key === 'ArrowLeft') lbPrev?.click();
     if (e.key === 'ArrowRight') lbNext?.click();
-  });
-}
-
-// ──────────────── CONTACT FORM ────────────────
-function initContactForm() {
-  const form = document.getElementById('contact-form');
-
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const fields = ['nama', 'telepon', 'keperluan', 'pesan'];
-    let valid = true;
-
-    fields.forEach(id => {
-      const input = document.getElementById(id);
-      const err = document.getElementById(id + '-error');
-      if (input && !input.value.trim()) {
-        valid = false;
-        input.classList.add('border-accent');
-        if (err) err.classList.remove('hidden');
-      } else if (input) {
-        input.classList.remove('border-accent');
-        if (err) err.classList.add('hidden');
-      }
-    });
-
-    // Email format (Optional)
-    const email = document.getElementById('email');
-    const emailErr = document.getElementById('email-error');
-    if (email && email.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
-      valid = false;
-      email.classList.add('border-accent');
-      if (emailErr) { emailErr.textContent = 'Format email tidak valid'; emailErr.classList.remove('hidden'); }
-    }
-
-    if (valid) {
-      const toast = document.getElementById('toast-success');
-      if (toast) {
-        toast.classList.remove('hidden');
-        setTimeout(() => toast.classList.add('hidden'), 4000);
-      }
-      form.reset();
-    }
-  });
-
-  // Clear error on input
-  form.querySelectorAll('input, textarea, select').forEach(el => {
-    el.addEventListener('input', () => {
-      el.classList.remove('border-accent');
-      const err = document.getElementById(el.id + '-error');
-      if (err) err.classList.add('hidden');
-    });
   });
 }
 
