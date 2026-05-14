@@ -87,97 +87,15 @@
     <div class="max-w-7xl mx-auto px-6">
       <div class="flex flex-wrap justify-center gap-3 mb-10">
         <button data-filter="all" class="px-5 py-2.5 rounded-full font-semibold text-sm transition-all bg-accent text-white shadow-md">Semua</button>
-        <button data-filter="hukum" class="px-5 py-2.5 rounded-full font-semibold text-sm transition-all bg-white text-gray-700 hover:bg-gray-100 shadow-sm border border-gray-200">Hukum</button>
-        <button data-filter="konseling" class="px-5 py-2.5 rounded-full font-semibold text-sm transition-all bg-white text-gray-700 hover:bg-gray-100 shadow-sm border border-gray-200">Konseling</button>
-        <button data-filter="rohani" class="px-5 py-2.5 rounded-full font-semibold text-sm transition-all bg-white text-gray-700 hover:bg-gray-100 shadow-sm border border-gray-200">Rohani & Mental</button>
-        <button data-filter="bakat" class="px-5 py-2.5 rounded-full font-semibold text-sm transition-all bg-white text-gray-700 hover:bg-gray-100 shadow-sm border border-gray-200">Minat Bakat</button>
-        <button data-filter="harian" class="px-5 py-2.5 rounded-full font-semibold text-sm transition-all bg-white text-gray-700 hover:bg-gray-100 shadow-sm border border-gray-200">Kegiatan Harian</button>
+        <button data-filter="belajar" class="px-5 py-2.5 rounded-full font-semibold text-sm transition-all bg-white text-gray-700 hover:bg-gray-100 shadow-sm border border-gray-200">Belajar</button>
+        <button data-filter="ibadah" class="px-5 py-2.5 rounded-full font-semibold text-sm transition-all bg-white text-gray-700 hover:bg-gray-100 shadow-sm border border-gray-200">Beribadah</button>
+        <button data-filter="olahraga" class="px-5 py-2.5 rounded-full font-semibold text-sm transition-all bg-white text-gray-700 hover:bg-gray-100 shadow-sm border border-gray-200">Olahraga</button>
+        <button data-filter="bersama" class="px-5 py-2.5 rounded-full font-semibold text-sm transition-all bg-white text-gray-700 hover:bg-gray-100 shadow-sm border border-gray-200">Kegiatan Bersama</button>
       </div>
 
       <!-- GALLERY GRID -->
       <div id="gallery-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
-        <!-- Item Hukum -->
-        <div class="gallery-item fade-up visible group cursor-pointer" data-category="hukum">
-          <div class="relative overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition-all bg-gray-200">
-            <img src="https://via.placeholder.com/600x400?text=Pendampingan+Hukum" alt="Pendampingan hukum ABH di pengadilan" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-5">
-              <div>
-                <p class="text-white font-semibold">Pendampingan Hukum Anak</p>
-                <p class="text-white/70 text-sm">Bandung — 2024</p>
-              </div>
-            </div>
-            <div class="absolute top-3 right-3 bg-white/20 backdrop-blur-sm rounded-full w-10 h-10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
-              <i class="fa-solid fa-expand text-white"></i>
-            </div>
-          </div>
-        </div>
-
-        <!-- Item Konseling -->
-        <div class="gallery-item fade-up visible group cursor-pointer" data-category="konseling">
-          <div class="relative overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition-all bg-gray-200">
-            <img src="https://via.placeholder.com/600x400?text=Assessment+Konseling" alt="Sesi assessment dan konseling anak" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-5">
-              <div>
-                <p class="text-white font-semibold">Assessment & Konseling Awal</p>
-                <p class="text-white/70 text-sm">YLAB — 2024</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Item Rohani -->
-        <div class="gallery-item fade-up visible group cursor-pointer" data-category="rohani">
-          <div class="relative overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition-all bg-gray-200">
-            <img src="https://via.placeholder.com/600x400?text=Bimbingan+Rohani" alt="Kegiatan pengajaran agama dan rohani" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-5">
-              <div>
-                <p class="text-white font-semibold">Bimbingan Rohani & Pengajaran Agama</p>
-                <p class="text-white/70 text-sm">YLAB — Rutin</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Item Bakat -->
-        <div class="gallery-item fade-up visible group cursor-pointer" data-category="bakat">
-          <div class="relative overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition-all bg-gray-200">
-            <img src="https://via.placeholder.com/600x400?text=Reparasi+Kreatif" alt="Kegiatan reparasi kreatif dan keterampilan" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-5">
-              <div>
-                <p class="text-white font-semibold">Pelatihan Reparasi Kreatif</p>
-                <p class="text-white/70 text-sm">Bandung — 2024</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Item Harian -->
-        <div class="gallery-item fade-up visible group cursor-pointer" data-category="harian">
-          <div class="relative overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition-all bg-gray-200">
-            <img src="https://via.placeholder.com/600x400?text=Healing+Olahraga" alt="Kegiatan healing dan olahraga rutin" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-5">
-              <div>
-                <p class="text-white font-semibold">Healing & Olahraga Bersama</p>
-                <p class="text-white/70 text-sm">Bandung — Rutin</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Item Harian -->
-        <div class="gallery-item fade-up visible group cursor-pointer" data-category="harian">
-          <div class="relative overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition-all bg-gray-200">
-            <img src="https://via.placeholder.com/600x400?text=Kegiatan+Kebersihan" alt="Kegiatan kebersihan lingkungan" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-5">
-              <div>
-                <p class="text-white font-semibold">Kegiatan Kebersihan Asrama</p>
-                <p class="text-white/70 text-sm">YLAB — Rutin</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
+        <!-- Konten akan diisi secara dinamis oleh main.js -->
       </div>
     </div>
   </section>

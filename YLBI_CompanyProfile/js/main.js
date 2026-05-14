@@ -99,8 +99,89 @@ function animateCount(el) {
 }
 
 // ──────────────── GALLERY (galeri.html) ────────────────
-function initGallery() {
+async function initGallery() {
   const grid = document.getElementById('gallery-grid');
+  if (!grid) return;
+
+  // Konfigurasi kategori dan folder
+  const categories = {
+    'belajar': { folder: 'Belajar', label: 'Kegiatan Belajar' },
+    'ibadah': { folder: 'Beribadah', label: 'Bimbingan Rohani' },
+    'olahraga': { folder: 'Olahraga', label: 'Olahraga & Kesehatan' },
+    'bersama': { folder: 'kegiatan_bersama', label: 'Kegiatan Bersama' }
+  };
+
+  // Tampilkan loading state jika perlu (opsional)
+  grid.innerHTML = '<div class="col-span-full text-center py-10 text-gray-400"><i class="fa-solid fa-circle-notch fa-spin text-2xl mb-2"></i><p>Memuat foto...</p></div>';
+
+  let allItemsHTML = '';
+  
+  // Loop setiap kategori untuk mencari foto secara berurutan
+  for (const cat in categories) {
+    const config = categories[cat];
+    let i = 1;
+    let failCount = 0;
+    
+    // Kita coba cari file 1, 2, 3... sampai tidak ketemu (max 2 kali gagal berturut-turut untuk jaga-jaga ada nomor terlewat)
+    while (failCount < 2) {
+      const fileName = `${cat}-${i}.jpg`;
+      const filePath = `asset/Galeri/${config.folder}/${fileName}`;
+      
+      const exists = await checkImageExists(filePath);
+      if (exists) {
+        allItemsHTML += createGalleryItemHTML(cat, filePath, config.label);
+        failCount = 0;
+      } else {
+        failCount++;
+      }
+      i++;
+      
+      // Safety break agar tidak infinite loop jika ada bug
+      if (i > 100) break;
+    }
+  }
+
+  // Masukkan ke grid
+  grid.innerHTML = allItemsHTML || '<p class="col-span-full text-center text-gray-500">Belum ada foto di galeri.</p>';
+
+  // Inisialisasi ulang scroll animation untuk item baru
+  initScrollAnimations();
+  
+  // Pasang listener untuk filter dan lightbox
+  attachGalleryListeners(grid);
+}
+
+// Fungsi bantu cek apakah gambar ada
+function checkImageExists(url) {
+  return new Promise((resolve) => {
+    const img = new Image();
+    img.onload = () => resolve(true);
+    img.onerror = () => resolve(false);
+    img.src = url;
+  });
+}
+
+// Template HTML untuk item galeri
+function createGalleryItemHTML(category, src, title) {
+  return `
+    <div class="gallery-item fade-up group cursor-pointer" data-category="${category}">
+      <div class="relative overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition-all bg-gray-200">
+        <img src="${src}" alt="${title}" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-5">
+          <div>
+            <p class="text-white font-semibold">${title}</p>
+            <p class="text-white/70 text-sm">Yayasan Lindungi Anak Bangsa</p>
+          </div>
+        </div>
+        <div class="absolute top-3 right-3 bg-white/20 backdrop-blur-sm rounded-full w-10 h-10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+          <i class="fa-solid fa-expand text-white"></i>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function attachGalleryListeners(grid) {
   const filterBtns = document.querySelectorAll('[data-filter]');
   const lightbox = document.getElementById('lightbox');
   const lbImg = document.getElementById('lb-img');
