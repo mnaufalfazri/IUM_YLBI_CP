@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yayasan Lindungi Anak Bangsa (YLAB) — Perlindungan Anak Indonesia</title>
-  <meta name="description" content="Yayasan Lindungi Anak Bangsa (YLAB) adalah lembaga sosial berfokus pada perlindungan, pemberdayaan, dan pemenuhan hak anak-anak Indonesia, khususnya Anak yang Berhadapan dengan Hukum (ABH).">
+  <meta name="description"
+    content="Yayasan Lindungi Anak Bangsa (YLAB) adalah lembaga sosial berfokus pada perlindungan, pemberdayaan, dan pemenuhan hak anak-anak Indonesia, khususnya Anak yang Berhadapan dengan Hukum (ABH).">
   <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Source+Sans+3:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            primary: { DEFAULT:'#0F172A', light:'#1E293B', dark:'#020617' },
-            accent: { DEFAULT:'#ED2124', hover:'#C81014' },
-            secondary: { DEFAULT:'#F39200', hover:'#D98200' },
+            primary: { DEFAULT: '#0F172A', light: '#1E293B', dark: '#020617' },
+            accent: { DEFAULT: '#ED2124', hover: '#C81014' },
+            secondary: { DEFAULT: '#F39200', hover: '#D98200' },
             light: '#F8FAFC',
           },
           fontFamily: {
@@ -29,13 +33,36 @@
     }
   </script>
   <style>
-    * { font-family: 'Source Sans 3', sans-serif; }
-    h1,h2,h3,h4,h5,h6 { font-family: 'Playfair Display', serif; }
-    .fade-up { opacity:0; transform:translateY(30px); transition:opacity .7s ease, transform .7s ease; }
-    .fade-up.visible { opacity:1; transform:translateY(0); }
-    html { scroll-behavior: smooth; }
+    * {
+      font-family: 'Source Sans 3', sans-serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: 'Playfair Display', serif;
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
   </style>
 </head>
+
 <body class="bg-white text-gray-800 antialiased">
 
   <!-- ========== NAVBAR ========== -->
@@ -47,7 +74,8 @@
           <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center shrink-0 overflow-hidden p-1">
             <img src="asset/Logo Yayasan.jpg.jpeg" alt="Logo YLAB" class="w-full h-full object-contain">
           </div>
-          <span class="text-white font-display font-bold text-lg leading-tight hidden sm:block">Lindungi Anak<br>Bangsa</span>
+          <span class="text-white font-display font-bold text-lg leading-tight hidden sm:block">Lindungi
+            Anak<br>Bangsa</span>
         </a>
         <!-- Desktop Menu -->
         <div class="hidden md:flex items-center gap-8">
@@ -56,7 +84,9 @@
           <a href="#program" class="text-white/90 hover:text-accent transition font-medium">Program</a>
           <a href="galeri.html" class="text-white/90 hover:text-accent transition font-medium">Galeri</a>
           <a href="kontak.html" class="text-white/90 hover:text-accent transition font-medium">Kontak</a>
-          <a href="kontak.html" class="bg-accent hover:bg-accent-hover text-white font-bold px-5 py-2.5 rounded-full transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">Hubungi Kami</a>
+          <a href="kontak.html"
+            class="bg-accent hover:bg-accent-hover text-white font-bold px-5 py-2.5 rounded-full transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5">Hubungi
+            Kami</a>
         </div>
         <!-- Mobile Button -->
         <button id="mobile-menu-btn" class="md:hidden text-white p-2" aria-label="Menu">
@@ -72,7 +102,9 @@
         <a href="#program" class="block text-white/80 py-2">Program</a>
         <a href="galeri.html" class="block text-white/80 py-2">Galeri</a>
         <a href="kontak.html" class="block text-white/80 py-2">Kontak</a>
-        <a href="kontak.html" class="inline-block bg-accent hover:bg-accent-hover text-white font-bold px-5 py-2.5 rounded-full mt-2">Hubungi Kami</a>
+        <a href="kontak.html"
+          class="inline-block bg-accent hover:bg-accent-hover text-white font-bold px-5 py-2.5 rounded-full mt-2">Hubungi
+          Kami</a>
       </div>
     </div>
   </nav>
@@ -81,23 +113,29 @@
   <header id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
     <!-- BG -->
     <div class="absolute inset-0 bg-primary-dark">
-      <img src="assets/images/hero.jpg" alt="Anak-anak Indonesia" class="w-full h-full object-cover opacity-50" onerror="this.style.display='none'">
+      <img src="assets/images/hero.jpg" alt="Anak-anak Indonesia" class="w-full h-full object-cover opacity-50"
+        onerror="this.style.display='none'">
       <div class="absolute inset-0 bg-gradient-to-br from-primary-dark/90 via-primary/80 to-primary-light/60"></div>
     </div>
     <!-- Content -->
     <div class="relative z-10 max-w-5xl mx-auto px-6 text-center mt-16">
-      <span class="inline-block bg-accent/90 text-white font-semibold px-4 py-1.5 rounded-full text-sm mb-6 backdrop-blur-sm border border-accent/30 shadow-lg">Yayasan Lindungi Anak Bangsa (YLAB)</span>
+      <span
+        class="inline-block bg-accent/90 text-white font-semibold px-4 py-1.5 rounded-full text-sm mb-6 backdrop-blur-sm border border-accent/30 shadow-lg">Yayasan
+        Lindungi Anak Bangsa (YLAB)</span>
       <h1 class="font-display text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight mb-6">
         Melindungi Anak Hari Ini,<br>Menyelamatkan <span class="text-accent">Bangsa Esok Hari</span>
       </h1>
       <p class="text-lg sm:text-xl text-white/90 max-w-3xl mx-auto mb-10 font-light leading-relaxed">
-        Mitra strategis pemerintah dan masyarakat dalam memberikan perlindungan, pemberdayaan, dan pemenuhan hak anak-anak Indonesia, khususnya Anak yang Berhadapan dengan Hukum (ABH).
+        Mitra strategis pemerintah dan masyarakat dalam memberikan perlindungan, pemberdayaan, dan pemenuhan hak
+        anak-anak Indonesia, khususnya Anak yang Berhadapan dengan Hukum (ABH).
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="kontak.html" class="bg-accent hover:bg-accent-hover text-white font-bold px-8 py-4 rounded-full text-lg transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1">
+        <a href="kontak.html"
+          class="bg-accent hover:bg-accent-hover text-white font-bold px-8 py-4 rounded-full text-lg transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1">
           <i class="fa-solid fa-phone mr-2"></i>Hubungi Kami
         </a>
-        <a href="#program" class="border-2 border-white/40 hover:border-white text-white font-semibold px-8 py-4 rounded-full text-lg transition-all hover:bg-white/10">
+        <a href="#program"
+          class="border-2 border-white/40 hover:border-white text-white font-semibold px-8 py-4 rounded-full text-lg transition-all hover:bg-white/10">
           Lihat Program <i class="fa-solid fa-arrow-down ml-2"></i>
         </a>
       </div>
@@ -111,43 +149,62 @@
         <!-- Text -->
         <div class="fade-up">
           <span class="text-accent font-semibold text-sm tracking-widest uppercase">Tentang Kami</span>
-          <h2 class="font-display text-3xl sm:text-4xl font-bold text-primary mt-2 mb-6">Membangun Harapan untuk Anak Indonesia</h2>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold text-primary mt-2 mb-6">Membangun Harapan untuk Anak
+            Indonesia</h2>
           <p class="text-gray-600 leading-relaxed mb-4">
-            <strong>Yayasan Lindungi Anak Bangsa (YLAB)</strong> didirikan pada tanggal <strong>1 Juli 2024</strong> di Bandung. Kami hadir sebagai organisasi sosial yang berfokus pada perlindungan, pemberdayaan, dan pemenuhan hak anak-anak Indonesia, khususnya Anak yang Berhadapan dengan Hukum (ABH), anak jalanan, dan anak korban kekerasan.
+            <strong>Yayasan Lindungi Anak Bangsa (YLAB)</strong> didirikan pada tanggal <strong>1 Juli 2024</strong> di
+            Bandung. Kami hadir sebagai organisasi sosial yang berfokus pada perlindungan, pemberdayaan, dan pemenuhan
+            hak anak-anak Indonesia, khususnya Anak yang Berhadapan dengan Hukum (ABH), anak jalanan, dan anak korban
+            kekerasan.
           </p>
           <p class="text-gray-600 leading-relaxed mb-8">
-            Sebagai mitra strategis pemerintah, masyarakat, dan dunia usaha, YLAB berkomitmen untuk memastikan setiap anak mendapatkan perlindungan hukum, pendampingan psikologis, dan kesempatan kedua untuk membangun masa depan yang lebih baik.
+            Sebagai mitra strategis pemerintah, masyarakat, dan dunia usaha, YLAB berkomitmen untuk memastikan setiap
+            anak mendapatkan perlindungan hukum, pendampingan psikologis, dan kesempatan kedua untuk membangun masa
+            depan yang lebih baik.
           </p>
 
           <div class="bg-light p-6 rounded-2xl border border-gray-100 mb-8">
-            <h3 class="font-display text-xl font-bold text-primary mb-3"><i class="fa-solid fa-eye text-accent mr-2"></i> Visi</h3>
-            <p class="text-gray-600 italic">"Menjadi lembaga terdepan dalam perlindungan dan pemberdayaan anak Indonesia guna menciptakan generasi yang tangguh, berdaya, dan berakhlak mulia."</p>
+            <h3 class="font-display text-xl font-bold text-primary mb-3"><i
+                class="fa-solid fa-eye text-accent mr-2"></i> Visi</h3>
+            <p class="text-gray-600 italic">"Menjadi lembaga terdepan dalam perlindungan dan pemberdayaan anak Indonesia
+              guna menciptakan generasi yang tangguh, berdaya, dan berakhlak mulia."</p>
           </div>
 
         </div>
         <!-- Misi & Struktur -->
         <div class="fade-up">
-          <h3 class="font-display text-2xl font-bold text-primary mb-6"><i class="fa-solid fa-bullseye text-accent mr-2"></i> Misi Kami</h3>
+          <h3 class="font-display text-2xl font-bold text-primary mb-6"><i
+              class="fa-solid fa-bullseye text-accent mr-2"></i> Misi Kami</h3>
           <ul class="space-y-4 mb-10">
             <li class="flex gap-4 items-start">
-              <div class="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center shrink-0 mt-1"><span class="text-secondary font-bold">1</span></div>
-              <p class="text-gray-600">Memberikan pendampingan hukum dan advokasi yang adil bagi Anak yang Berhadapan dengan Hukum (ABH).</p>
+              <div class="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center shrink-0 mt-1"><span
+                  class="text-secondary font-bold">1</span></div>
+              <p class="text-gray-600">Memberikan pendampingan hukum dan advokasi yang adil bagi Anak yang Berhadapan
+                dengan Hukum (ABH).</p>
             </li>
             <li class="flex gap-4 items-start">
-              <div class="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center shrink-0 mt-1"><span class="text-secondary font-bold">2</span></div>
-              <p class="text-gray-600">Menyelenggarakan program edukasi dan sosialisasi mengenai hak-hak anak kepada masyarakat luas.</p>
+              <div class="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center shrink-0 mt-1"><span
+                  class="text-secondary font-bold">2</span></div>
+              <p class="text-gray-600">Menyelenggarakan program edukasi dan sosialisasi mengenai hak-hak anak kepada
+                masyarakat luas.</p>
             </li>
             <li class="flex gap-4 items-start">
-              <div class="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center shrink-0 mt-1"><span class="text-secondary font-bold">3</span></div>
-              <p class="text-gray-600">Membangun kemitraan strategis dengan pemerintah, aparat penegak hukum, dan lembaga sosial lainnya.</p>
+              <div class="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center shrink-0 mt-1"><span
+                  class="text-secondary font-bold">3</span></div>
+              <p class="text-gray-600">Membangun kemitraan strategis dengan pemerintah, aparat penegak hukum, dan
+                lembaga sosial lainnya.</p>
             </li>
             <li class="flex gap-4 items-start">
-              <div class="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center shrink-0 mt-1"><span class="text-secondary font-bold">4</span></div>
-              <p class="text-gray-600">Menyediakan layanan konseling, rehabilitasi, dan reintegrasi sosial bagi anak-anak yang membutuhkan.</p>
+              <div class="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center shrink-0 mt-1"><span
+                  class="text-secondary font-bold">4</span></div>
+              <p class="text-gray-600">Menyediakan layanan konseling, rehabilitasi, dan reintegrasi sosial bagi
+                anak-anak yang membutuhkan.</p>
             </li>
             <li class="flex gap-4 items-start">
-              <div class="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center shrink-0 mt-1"><span class="text-secondary font-bold">5</span></div>
-              <p class="text-gray-600">Melakukan advokasi kebijakan publik yang berpihak pada perlindungan dan kesejahteraan anak.</p>
+              <div class="w-8 h-8 rounded-full bg-secondary/10 flex items-center justify-center shrink-0 mt-1"><span
+                  class="text-secondary font-bold">5</span></div>
+              <p class="text-gray-600">Melakukan advokasi kebijakan publik yang berpihak pada perlindungan dan
+                kesejahteraan anak.</p>
             </li>
           </ul>
 
@@ -171,49 +228,65 @@
       <div class="text-center mb-16 fade-up">
         <span class="text-accent font-semibold text-sm tracking-widest uppercase">Fokus Kami</span>
         <h2 class="font-display text-3xl sm:text-4xl font-bold text-primary mt-2">Program Unggulan</h2>
-        <p class="text-gray-500 mt-4 max-w-2xl mx-auto">Kami merancang program yang komprehensif untuk memastikan setiap anak mendapatkan perlindungan dan kesempatan berkembang.</p>
+        <p class="text-gray-500 mt-4 max-w-2xl mx-auto">Kami merancang program yang komprehensif untuk memastikan setiap
+          anak mendapatkan perlindungan dan kesempatan berkembang.</p>
       </div>
-      
+
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
         <!-- Card 1 -->
-        <div class="fade-up bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group border-b-4 border-b-transparent hover:border-b-accent">
-          <div class="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-white text-accent transition-colors">
+        <div
+          class="fade-up bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group border-b-4 border-b-transparent hover:border-b-accent">
+          <div
+            class="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-white text-accent transition-colors">
             <i class="fa-solid fa-scale-balanced text-2xl"></i>
           </div>
           <h3 class="font-display text-xl font-bold text-primary mb-3">Rehabilitasi Sosial ABH</h3>
-          <p class="text-gray-500 text-sm leading-relaxed">Pendampingan menyeluruh bagi Anak yang Berhadapan dengan Hukum untuk pemulihan dan reintegrasi.</p>
+          <p class="text-gray-500 text-sm leading-relaxed">Pendampingan menyeluruh bagi Anak yang Berhadapan dengan
+            Hukum untuk pemulihan dan reintegrasi.</p>
         </div>
         <!-- Card 2 -->
-        <div class="fade-up bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group border-b-4 border-b-transparent hover:border-b-accent">
-          <div class="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-white text-accent transition-colors">
+        <div
+          class="fade-up bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group border-b-4 border-b-transparent hover:border-b-accent">
+          <div
+            class="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-white text-accent transition-colors">
             <i class="fa-solid fa-bullhorn text-2xl"></i>
           </div>
           <h3 class="font-display text-xl font-bold text-primary mb-3">Sosialisasi Hak Anak</h3>
-          <p class="text-gray-500 text-sm leading-relaxed">Edukasi kepada masyarakat dan instansi mengenai pentingnya pemenuhan hak-hak anak.</p>
+          <p class="text-gray-500 text-sm leading-relaxed">Edukasi kepada masyarakat dan instansi mengenai pentingnya
+            pemenuhan hak-hak anak.</p>
         </div>
         <!-- Card 3 -->
-        <div class="fade-up bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group border-b-4 border-b-transparent hover:border-b-accent">
-          <div class="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-white text-accent transition-colors">
+        <div
+          class="fade-up bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group border-b-4 border-b-transparent hover:border-b-accent">
+          <div
+            class="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-white text-accent transition-colors">
             <i class="fa-solid fa-hand-holding-heart text-2xl"></i>
           </div>
           <h3 class="font-display text-xl font-bold text-primary mb-3">Layanan Sosial</h3>
-          <p class="text-gray-500 text-sm leading-relaxed">Penyediaan konsultasi, bimbingan psikologis, dan pelatihan keterampilan bagi anak.</p>
+          <p class="text-gray-500 text-sm leading-relaxed">Penyediaan konsultasi, bimbingan psikologis, dan pelatihan
+            keterampilan bagi anak.</p>
         </div>
         <!-- Card 4 -->
-        <div class="fade-up bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group border-b-4 border-b-transparent hover:border-b-accent">
-          <div class="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-white text-accent transition-colors">
+        <div
+          class="fade-up bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group border-b-4 border-b-transparent hover:border-b-accent">
+          <div
+            class="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-white text-accent transition-colors">
             <i class="fa-solid fa-house-chimney-user text-2xl"></i>
           </div>
           <h3 class="font-display text-xl font-bold text-primary mb-3">Penguatan Keluarga</h3>
-          <p class="text-gray-500 text-sm leading-relaxed">Membangun lingkungan keluarga dan komunitas yang suportif untuk tumbuh kembang anak.</p>
+          <p class="text-gray-500 text-sm leading-relaxed">Membangun lingkungan keluarga dan komunitas yang suportif
+            untuk tumbuh kembang anak.</p>
         </div>
         <!-- Card 5 -->
-        <div class="fade-up bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group border-b-4 border-b-transparent hover:border-b-accent">
-          <div class="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-white text-accent transition-colors">
+        <div
+          class="fade-up bg-white rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 group border-b-4 border-b-transparent hover:border-b-accent">
+          <div
+            class="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-accent group-hover:text-white text-accent transition-colors">
             <i class="fa-solid fa-users-gear text-2xl"></i>
           </div>
           <h3 class="font-display text-xl font-bold text-primary mb-3">Pelatihan Tenaga Profesional</h3>
-          <p class="text-gray-500 text-sm leading-relaxed">Meningkatkan kapasitas relawan dan tenaga profesional dalam menangani kasus anak.</p>
+          <p class="text-gray-500 text-sm leading-relaxed">Meningkatkan kapasitas relawan dan tenaga profesional dalam
+            menangani kasus anak.</p>
         </div>
       </div>
     </div>
@@ -267,20 +340,27 @@
   <section class="py-24 bg-light">
     <div class="max-w-7xl mx-auto px-6">
       <div class="grid lg:grid-cols-2 gap-16">
-        
+
         <!-- MITRA -->
         <div class="fade-up">
           <span class="text-accent font-semibold text-sm tracking-widest uppercase">Kolaborasi</span>
           <h2 class="font-display text-3xl font-bold text-primary mt-2 mb-8">Mitra Strategis</h2>
           <div class="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm">
             <ul class="space-y-4">
-              <li class="flex items-center gap-3"><i class="fa-solid fa-check-circle text-green-500"></i> <span class="font-medium text-gray-700">Kementerian PPPA (KPPPA)</span></li>
-              <li class="flex items-center gap-3"><i class="fa-solid fa-check-circle text-green-500"></i> <span class="font-medium text-gray-700">Kejaksaan Republik Indonesia</span></li>
-              <li class="flex items-center gap-3"><i class="fa-solid fa-check-circle text-green-500"></i> <span class="font-medium text-gray-700">Pengadilan Negeri Bale Bandung</span></li>
-              <li class="flex items-center gap-3"><i class="fa-solid fa-check-circle text-green-500"></i> <span class="font-medium text-gray-700">Kepolisian Republik Indonesia (Polri)</span></li>
-              <li class="flex items-center gap-3"><i class="fa-solid fa-check-circle text-green-500"></i> <span class="font-medium text-gray-700">Lembaga Perlindungan Anak Indonesia (LPAI)</span></li>
-              <li class="flex items-center gap-3"><i class="fa-solid fa-check-circle text-green-500"></i> <span class="font-medium text-gray-700">Dinas Sosial Provinsi Jawa Barat</span></li>
-              <li class="flex items-center gap-3"><i class="fa-solid fa-check-circle text-green-500"></i> <span class="font-medium text-gray-700">Badan Pemasyarakatan (BAPPAS)</span></li>
+              <li class="flex items-center gap-3"><i class="fa-solid fa-check-circle text-green-500"></i> <span
+                  class="font-medium text-gray-700">Kementerian PPPA (KPPPA)</span></li>
+              <li class="flex items-center gap-3"><i class="fa-solid fa-check-circle text-green-500"></i> <span
+                  class="font-medium text-gray-700">Kejaksaan Republik Indonesia</span></li>
+              <li class="flex items-center gap-3"><i class="fa-solid fa-check-circle text-green-500"></i> <span
+                  class="font-medium text-gray-700">Pengadilan Negeri Bale Bandung</span></li>
+              <li class="flex items-center gap-3"><i class="fa-solid fa-check-circle text-green-500"></i> <span
+                  class="font-medium text-gray-700">Kepolisian Republik Indonesia (Polri)</span></li>
+              <li class="flex items-center gap-3"><i class="fa-solid fa-check-circle text-green-500"></i> <span
+                  class="font-medium text-gray-700">Lembaga Perlindungan Anak Indonesia (LPAI)</span></li>
+              <li class="flex items-center gap-3"><i class="fa-solid fa-check-circle text-green-500"></i> <span
+                  class="font-medium text-gray-700">Dinas Sosial Provinsi Jawa Barat</span></li>
+              <li class="flex items-center gap-3"><i class="fa-solid fa-check-circle text-green-500"></i> <span
+                  class="font-medium text-gray-700">Badan Pemasyarakatan (BAPPAS)</span></li>
             </ul>
           </div>
         </div>
@@ -290,15 +370,23 @@
           <span class="text-accent font-semibold text-sm tracking-widest uppercase">Trust & Credibility</span>
           <h2 class="font-display text-3xl font-bold text-primary mt-2 mb-8">Legalitas Yayasan</h2>
           <div class="bg-primary-dark text-white rounded-2xl p-8 shadow-lg relative overflow-hidden">
-            <div class="absolute -right-10 -top-10 text-9xl text-white/5"><i class="fa-solid fa-file-contract"></i></div>
+            <div class="absolute -right-10 -top-10 text-9xl text-white/5"><i class="fa-solid fa-file-contract"></i>
+            </div>
             <ul class="space-y-4 relative z-10 text-sm">
-              <li class="flex gap-3"><i class="fa-solid fa-award text-accent mt-1"></i> <span><strong>Akta Pendirian No. 01</strong> Tanggal 1 Juli 2024</span></li>
-              <li class="flex gap-3"><i class="fa-solid fa-award text-accent mt-1"></i> <span><strong>SK Menkumham</strong> AHU-0010209.AH.01.04. Tahun 2024</span></li>
-              <li class="flex gap-3"><i class="fa-solid fa-award text-accent mt-1"></i> <span><strong>Tanda Pendaftaran LKS</strong> Nomor: 400.3.6.6/4942/Dayasos</span></li>
-              <li class="flex gap-3"><i class="fa-solid fa-award text-accent mt-1"></i> <span><strong>Surat Keterangan Domisili</strong> No. 471.1/74/V2025/Pem</span></li>
-              <li class="flex gap-3"><i class="fa-solid fa-award text-accent mt-1"></i> <span><strong>Izin Tetangga</strong> RT 003 RW 002 Desa Kamasan, Banjaran</span></li>
-              <li class="flex gap-3"><i class="fa-solid fa-award text-accent mt-1"></i> <span><strong>AD/ART</strong> Terdaftar Resmi</span></li>
-              <li class="flex gap-3"><i class="fa-solid fa-award text-accent mt-1"></i> <span><strong>Jadwal Kegiatan Pembinaan</strong> Rutin</span></li>
+              <li class="flex gap-3"><i class="fa-solid fa-award text-accent mt-1"></i> <span><strong>Akta Pendirian No.
+                    01</strong> Tanggal 1 Juli 2024</span></li>
+              <li class="flex gap-3"><i class="fa-solid fa-award text-accent mt-1"></i> <span><strong>SK
+                    Menkumham</strong> AHU-0010209.AH.01.04. Tahun 2024</span></li>
+              <li class="flex gap-3"><i class="fa-solid fa-award text-accent mt-1"></i> <span><strong>Tanda Pendaftaran
+                    LKS</strong> Nomor: 400.3.6.6/4942/Dayasos</span></li>
+              <li class="flex gap-3"><i class="fa-solid fa-award text-accent mt-1"></i> <span><strong>Surat Keterangan
+                    Domisili</strong> No. 471.1/74/V2025/Pem</span></li>
+              <li class="flex gap-3"><i class="fa-solid fa-award text-accent mt-1"></i> <span><strong>Izin
+                    Tetangga</strong> RT 003 RW 002 Desa Kamasan, Banjaran</span></li>
+              <li class="flex gap-3"><i class="fa-solid fa-award text-accent mt-1"></i> <span><strong>AD/ART</strong>
+                  Terdaftar Resmi</span></li>
+              <li class="flex gap-3"><i class="fa-solid fa-award text-accent mt-1"></i> <span><strong>Jadwal Kegiatan
+                    Pembinaan</strong> Rutin</span></li>
             </ul>
           </div>
         </div>
@@ -314,9 +402,12 @@
       <div class="absolute bottom-0 left-0 w-96 h-96 bg-primary-light/20 rounded-full blur-3xl"></div>
     </div>
     <div class="max-w-4xl mx-auto px-6 text-center relative z-10 fade-up">
-      <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">Mari Wujudkan Masa Depan Cerah bagi Mereka</h2>
-      <p class="text-white/80 text-lg mb-10 max-w-2xl mx-auto italic">"Melindungi Anak Hari Ini, Menyelamatkan Bangsa Esok Hari"</p>
-      <a href="kontak.html" class="bg-accent hover:bg-accent-hover text-white font-bold px-8 py-4 rounded-full text-lg transition-all shadow-xl hover:shadow-2xl inline-flex items-center gap-2 hover:-translate-y-1">
+      <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">Mari Wujudkan Masa Depan Cerah
+        bagi Mereka</h2>
+      <p class="text-white/80 text-lg mb-10 max-w-2xl mx-auto italic">"Melindungi Anak Hari Ini, Menyelamatkan Bangsa
+        Esok Hari"</p>
+      <a href="kontak.html"
+        class="bg-accent hover:bg-accent-hover text-white font-bold px-8 py-4 rounded-full text-lg transition-all shadow-xl hover:shadow-2xl inline-flex items-center gap-2 hover:-translate-y-1">
         Bergabung Bersama Kami <i class="fa-solid fa-arrow-right"></i>
       </a>
     </div>
@@ -333,7 +424,8 @@
             </div>
             <span class="font-display font-bold text-xl text-white">YLAB</span>
           </div>
-          <p class="text-white/60 text-sm leading-relaxed mb-4">Yayasan Lindungi Anak Bangsa<br>Lembaga Sosial / LKSA berfokus pada perlindungan Anak yang Berhadapan dengan Hukum.</p>
+          <p class="text-white/60 text-sm leading-relaxed mb-4">Yayasan Lindungi Anak Bangsa<br>Lembaga Sosial / LKSA
+            berfokus pada perlindungan Anak yang Berhadapan dengan Hukum.</p>
         </div>
         <div>
           <h4 class="font-display font-bold text-lg mb-4 text-accent">Navigasi</h4>
@@ -349,8 +441,9 @@
           <h4 class="font-display font-bold text-lg mb-4 text-accent">Hubungi Kami</h4>
           <ul class="space-y-3 text-white/70 text-sm">
             <li class="flex items-start gap-3">
-              <i class="fa-solid fa-location-dot text-accent mt-1"></i> 
-              <span>Komp. Damarmas, Jl. Raya Damar Mas No. 10A, RT 006 RW 012, Desa Kamasan, Kec. Banjaran, Kabupaten Bandung, 40377</span>
+              <i class="fa-solid fa-location-dot text-accent mt-1"></i>
+              <span>Komp. Damarmas, Jl. Raya Damar Mas No. 10A, RT 006 RW 012, Desa Kamasan, Kec. Banjaran, Kabupaten
+                Bandung, 40377</span>
             </li>
             <li class="flex items-center gap-3"><i class="fa-solid fa-phone text-accent"></i> 0813 1222 2206</li>
           </ul>
@@ -364,4 +457,5 @@
 
   <script src="js/main.js"></script>
 </body>
+
 </html>
